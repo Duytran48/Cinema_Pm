@@ -1,0 +1,61 @@
+﻿@{
+    /* File: Views/Home/Booking.cshtml */
+    ViewData["Title"] = "Đặt Vé Nhanh - CGStar";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Giữ layout chung
+}
+
+@* ĐẶT VÉ NHANH *@
+<vc:quick-booking ></vc:quick-booking>
+
+@* PHIM ĐANG CHIẾU *@
+<vc:now-showing count="32"></vc:now-showing>
+
+@* PHIM SẮP CHIẾU *@
+<vc:coming-soon count="12"></vc:coming-soon>
+
+@section Scripts {
+    <script>
+        // Giữ nguyên các script Swiper nếu cần (từ Index.cshtml), nhưng chỉ cho phần phim
+        const movieSwiper = new Swiper('.movie-swiper', {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 20,
+            loop: false,
+            pagination: {
+                el: '.movie-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.movie-next',
+                prevEl: '.movie-prev',
+            },
+            breakpoints: {
+                1200: { slidesPerView: 4, slidesPerGroup: 4 },
+                992: { slidesPerView: 4, slidesPerGroup: 4 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
+                480: { slidesPerView: 1, slidesPerGroup: 1 },
+            },
+        });
+
+        const comingSoonSwiper = new Swiper('.coming-soon-swiper', {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 20,
+            loop: false,
+            pagination: {
+                el: '.coming-soon-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.coming-soon-next',
+                prevEl: '.coming-soon-prev',
+            },
+            breakpoints: {
+                1200: { slidesPerView: 4, slidesPerGroup: 4 },
+                992: { slidesPerView: 4, slidesPerGroup: 4 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
+                480: { slidesPerView: 1, slidesPerGroup: 1 },
+            },
+        });
+    </script>
+}

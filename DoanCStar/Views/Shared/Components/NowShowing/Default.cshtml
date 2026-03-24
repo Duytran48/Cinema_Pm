@@ -1,0 +1,79 @@
+﻿@using DoanCStar.Models
+@model IEnumerable<Movie>
+@{
+
+    var sectionTitle = ViewBag.SectionTitle ?? "PHIM ĐANG CHIẾU";
+    var statusValue = ViewBag.StatusValue ?? "Đang chiếu";  
+}
+
+<div class="container my-5 now-showing-section">
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h4 class="fw-bold text-warning">PHIM ĐANG CHIẾU</h4>
+    </div>
+
+    <div class="swiper movie-swiper">
+        <div class="swiper-wrapper">
+
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var movie in Model)
+                {
+                    <div class="swiper-slide">
+
+                     
+                        <a asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.MovieId" class="movie-poster-box">
+
+                            <img src="@movie.ImageUrl" class="img-fluid" alt="@movie.Title" />
+
+                            <div class="movie-info-overlay">
+                                <ul class="movie-info-list">
+                                    <li><i class="bi bi-tag-fill"></i> <span>@movie.Genre</span></li>
+                                    <li><i class="bi bi-clock-fill"></i> <span>@movie.Duration'</span></li>
+                                    <li><i class="bi bi-globe"></i> <span>@movie.Country</span></li>
+                                    <li><i class="bi bi-chat-left-dots-fill"></i> <span>@movie.Language</span></li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <div class="text-center mt-2">
+                            <h6 class="fw-bold text-white mb-4">@movie.Title</h6>
+                            <div class="card-buttons">
+                          
+                                <a href="javascript:void(0);"
+                                   class="btn btn-sm btn-outline-warning js-play-trailer"
+                                   data-trailer-url="@movie.TrailerUrl"
+                                   data-movie-title="@movie.Title">
+                                    Xem trailer
+                                </a>
+
+                        
+                                <a asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.MovieId" class="btn btn-sm btn-animate btn-ticket">
+                                    Đặt vé
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <p class="text-center text-white-50">Hiện chưa có phim đang chiếu.</p>
+                </div>
+            }
+
+        </div>
+
+        <div class="swiper-button-prev movie-prev"></div>
+        <div class="swiper-button-next movie-next"></div>
+        <div class="swiper-pagination movie-pagination"></div>
+    </div>
+    <div class="text-center mt-4">
+        <a asp-controller="Home"
+           asp-action="Movies"
+           asp-route-status="@statusValue"
+           class="btn btn-outline-warning fw-bold px-5 py-2">
+            XEM THÊM
+        </a>
+    </div>
+</div>

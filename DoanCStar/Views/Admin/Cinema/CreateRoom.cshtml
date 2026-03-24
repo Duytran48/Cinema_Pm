@@ -1,0 +1,51 @@
+﻿@model DoanCStar.Models.Room
+
+@{
+    ViewData["Title"] = "Thêm Phòng Mới";
+    Layout = "_AdminLayout";
+    int cinemaId = ViewBag.CinemaId;
+    string cinemaName = ViewBag.CinemaName;
+}
+
+<h1 class="h3 mb-2 text-gray-800">Thêm Phòng Mới</h1>
+<p class="mb-4">Cho Rạp: <strong class="text-primary">@cinemaName</strong></p>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <form asp-action="CreateRoom">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            @* Input ẩn để biết phòng thuộc rạp nào *@
+            <input type="hidden" asp-for="CinemaId" value="@cinemaId" />
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Tên Phòng *</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Capacity" class="form-label">Sức chứa *</label>
+                <input asp-for="Capacity" type="number" class="form-control" />
+                <span asp-validation-for="Capacity" class="text-danger"></span>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle-fill me-2"></i> Lưu Phòng
+                </button>
+                @* Nút hủy quay lại trang quản lý phòng của rạp hiện tại *@
+                <a asp-action="RoomManagement" asp-route-cinemaId="@cinemaId" class="btn btn-secondary ms-2">
+                    <i class="bi bi-x-circle me-2"></i> Hủy
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model DoanCStar.ViewModels.MovieViewModel
+
+<div class="container-fluid">
+    <h2 class="mb-4">Thêm phim mới</h2>
+
+    <form asp-action="Create" enctype="multipart/form-data">
+        <partial name="_MovieForm" model="Model" />
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-success">Lưu</button>
+            <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,45 @@
+﻿@model DoanCStar.Models.Cinema
+
+@{
+    ViewData["Title"] = "Xác nhận Xóa Rạp";
+    Layout = "_AdminLayout";
+}
+
+<h1 class="h3 mb-4 text-gray-800">Xác nhận Xóa Rạp</h1>
+
+<div class="alert alert-danger" role="alert">
+    <strong>Bạn có chắc chắn muốn xóa rạp này không?</strong>
+    <p>Tất cả thông tin về phòng chiếu, ghế ngồi, và suất chiếu thuộc rạp này cũng có thể bị ảnh hưởng hoặc xóa theo. Hành động này không thể hoàn tác.</p>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Thông tin Rạp sẽ bị xóa</h6>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Tên Rạp</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Địa chỉ</dt>
+            <dd class="col-sm-9">@Model.Address</dd>
+
+            <dt class="col-sm-3">Thành phố</dt>
+            <dd class="col-sm-9">@Model.City</dd>
+
+            <dt class="col-sm-3">Số điện thoại</dt>
+            <dd class="col-sm-9">@Model.Phone</dd>
+        </dl>
+
+        <form asp-action="DeleteCinema">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="CinemaId" /> @* Id để gửi về Controller *@
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash3-fill me-2"></i> Xác nhận Xóa
+            </button>
+            <a asp-action="CinemaManagement" class="btn btn-secondary ms-2">
+                <i class="bi bi-x-circle me-2"></i> Hủy
+            </a>
+        </form>
+    </div>
+</div>

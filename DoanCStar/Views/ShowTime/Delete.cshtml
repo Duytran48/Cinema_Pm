@@ -1,0 +1,36 @@
+﻿@model DoanCStar.ViewModels.ShowTimeViewModel
+@{
+    ViewData["Title"] = "Xóa suất chiếu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card border-danger">
+    <div class="card-header bg-danger text-white">
+        <h5>@ViewData["Title"]</h5>
+    </div>
+    <div class="card-body">
+        <h3 class="text-danger">Bạn có chắc chắn muốn xóa suất chiếu này?</h3>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-3">Phim</dt>
+            <dd class="col-sm-9">@Model.MovieTitle</dd>
+
+            <dt class="col-sm-3">Phòng chiếu</dt>
+            <dd class="col-sm-9">@Model.RoomName</dd>
+
+            <dt class="col-sm-3">Bắt đầu</dt>
+            <dd class="col-sm-9">@Model.StartTime.ToString("dd/MM/yyyy HH:mm")</dd>
+
+            <dt class="col-sm-3">Kết thúc</dt>
+            <dd class="col-sm-9">@Model.EndTime.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="ShowTimeId" />
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+        </form>
+    </div>
+</div>

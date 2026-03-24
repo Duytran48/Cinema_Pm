@@ -1,0 +1,47 @@
+﻿@using DoanCStar.ViewModels
+@model Dictionary<string, List<CinemaDropdownViewModel>>
+
+<div class="cinema-dropdown-wrapper">
+    <div class="row gx-4 gy-3">
+        @foreach (var cityGroup in Model)
+        {
+            <div class="col-md-3 col-6">
+                <h6 class="dropdown-header text-warning fw-bold bg-dark py-2 px-3 rounded-top">
+                    @cityGroup.Key
+                </h6>
+                <ul class="list-unstyled bg-dark rounded-bottom p-2" style="max-height: 200px; overflow-y: auto;">
+                    @foreach (var cinema in cityGroup.Value)
+                    {
+                        <li>
+                            <a class="dropdown-item cinema-item text-white py-2 px-3 rounded hover-gold"
+                               href="@Url.Action("Schedule", "Cinema", new { cinemaId = cinema.CinemaId })">
+                                @cinema.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @if (!Model.Any())
+        {
+            <div class="col-12 text-center text-muted p-4">
+                Chưa có rạp nào.
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .hover-gold:hover {
+        background: #ffd700 !important;
+        color: #000 !important;
+        font-weight: 600;
+    }
+
+    .cinema-dropdown-menu {
+        width: 800px !important;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+</style>

@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model DoanCStar.ViewModels.MovieViewModel
+
+<div class="container-fluid">
+    <h2 class="mb-4">@Model.Title</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <img src="@Model.ImageUrl" class="img-fluid rounded shadow-sm" />
+            }
+        </div>
+        <div class="col-md-8">
+            <p><strong>Thời lượng:</strong> @Model.Duration phút</p>
+            <p><strong>Đạo diễn:</strong> @Model.Director</p>
+            <p><strong>Thể loại:</strong> @Model.Genre</p>
+            <p><strong>Quốc gia:</strong> @Model.Country</p>
+            <p><strong>Ngôn ngữ:</strong> @Model.Language</p>
+            <p><strong>Phụ đề:</strong> @(Model.Subtitle ? "Có" : "Không")</p>
+            <p><strong>Lồng tiếng:</strong> @(Model.Dubbed ? "Có" : "Không")</p>
+            <p><strong>Trạng thái:</strong> <span class="badge bg-primary">@Model.Status</span></p>
+            <p><strong>Mô tả:</strong> @Model.Description</p>
+
+            @if (!string.IsNullOrEmpty(Model.TrailerUrl))
+            {
+                <p><strong>Trailer:</strong></p>
+                <iframe width="100%" height="315"
+                        src="@Model.TrailerUrl.Replace("watch?v=", "embed/")"
+                        frameborder="0" allowfullscreen></iframe>
+            }
+
+            <div class="mt-3">
+                <a asp-action="Edit" asp-route-id="@Model.MovieId" class="btn btn-warning">Sửa</a>
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,249 @@
+﻿@model DoanCStar.Models.ViewModels.QuickBookingViewModel
+
+<div class="quick-booking-section">
+    <div class="qb-container">
+        <h2 class="qb-title">ĐẶT VÉ NHANH</h2>
+        <form id="quickBookingForm" asp-controller="Booking" asp-action="SelectSeats" method="get" class="qb-form">
+            <div class="qb-grid">
+                <!-- 1. Chọn rạp (bắt đầu tuần tự như Cinestar) -->
+                <div class="qb-field">
+                    <label asp-for="Cinemas" class="qb-label">Chọn rạp</label>
+                    <select asp-for="SelectedCinemaId" name="cinemaId" class="qb-select" required onchange="loadMovies(this.value); enableButton();">
+                        <option value="">-- Chọn rạp --</option>
+                        @foreach (var item in Model.Cinemas)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                </div>
+
+                <!-- 2. Chọn phim -->
+                <div class="qb-field">
+                    <label asp-for="Movies" class="qb-label">Chọn phim</label>
+                    <select name="movieId" class="qb-select" required disabled onchange="loadDates(); enableButton();">
+                        <option value="">-- Chọn phim --</option>
+                    </select>
+                </div>
+
+                <!-- 3. Chọn ngày -->
+                <div class="qb-field">
+                    <label asp-for="Dates" class="qb-label">Ngày chiếu</label>
+                    <select name="date" class="qb-select" required disabled onchange="loadShowTimes(); enableButton();">
+                        <option value="">-- Chọn ngày --</option>
+                    </select>
+                </div>
+
+                <!-- 4. Chọn suất -->
+                <div class="qb-field">
+                    <label asp-for="ShowTimes" class="qb-label">Suất chiếu</label>
+                    <select name="showTimeId" class="qb-select" required disabled>
+                        <option value="">-- Chọn suất --</option>
+                    </select>
+                </div>
+
+                <!-- Nút Đặt ngay (enable khi đủ tuần tự) -->
+                <div class="qb-field qb-submit">
+                    <button type="submit" id="submitBtn" class="qb-btn" disabled>ĐẶT NGAY</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* CSS thuần - Responsive, không Bootstrap */
+    .quick-booking-section {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        padding: 50px 20px;
+        margin: 40px 0;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .qb-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .qb-title {
+        text-align: center;
+        color: #ffd700;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .qb-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        align-items: end;
+    }
+
+    @@media (max-width: 768px) {
+        .qb-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .qb-grid {
+            gap: 15px;
+        }
+    }
+
+    .qb-field {
+        position: relative;
+    }
+
+    .qb-label {
+        display: block;
+        color: #fff;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .qb-select {
+        width: 100%;
+        padding: 12px 15px;
+        background: rgba(255,255,255,0.1);
+        border: 2px solid rgba(255,255,255,0.3);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .qb-select:focus {
+            border-color: #ffd700;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .qb-select option {
+            background: #2a5298;
+            color: #fff;
+        }
+
+        .qb-select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+    .qb-submit {
+        text-align: center;
+    }
+
+    .qb-btn {
+        background: #ffd700;
+        color: #1e3c72;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s;
+        opacity: 0.5;
+    }
+
+        .qb-btn:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+            opacity: 1;
+        }
+
+        .qb-btn:disabled {
+            cursor: not-allowed;
+        }
+</style>
+
+<script>
+    // JS cascade tuần tự (fetch API - không jQuery)
+    async function loadMovies(cinemaId) {
+        if (!cinemaId) { clearFrom('movieId'); return; }
+        const response = await fetch(`/Booking/GetMoviesByCinema?cinemaId=${cinemaId}`);
+        const movies = await response.json();
+        const select = document.querySelector('select[name="movieId"]');
+        select.innerHTML = '<option value="">-- Chọn phim --</option>';
+        movies.forEach(m => select.innerHTML += `<option value="${m.value}">${m.text}</option>`);
+        select.disabled = false;
+        clearFrom('date');
+    }
+
+    async function loadDates() {
+        const cinemaId = document.querySelector('select[name="cinemaId"]').value;
+        const movieId = document.querySelector('select[name="movieId"]').value;
+        if (!cinemaId || !movieId) { clearFrom('date'); return; }
+        const response = await fetch(`/Booking/GetDatesByMovieAndCinema?movieId=${movieId}&cinemaId=${cinemaId}`);
+        const dates = await response.json();
+        const select = document.querySelector('select[name="date"]');
+        select.innerHTML = '<option value="">-- Chọn ngày --</option>';
+        dates.forEach(d => select.innerHTML += `<option value="${d}">${d}</option>`);
+        select.disabled = false;
+        clearFrom('showTimeId');
+    }
+
+        async function loadShowTimes() {
+        const cinemaId = document.querySelector('select[name="cinemaId"]').value;
+        const movieId = document.querySelector('select[name="movieId"]').value;
+        const date = document.querySelector('select[name="date"]').value;
+
+        if (!cinemaId || !movieId || !date) {
+            clearFrom('showTimeId');
+            return;
+        }
+
+        try {
+            const response = await fetch(`/Booking/GetShowTimesByFilters?cinemaId=${cinemaId}&movieId=${movieId}&date=${encodeURIComponent(date)}`);
+            const showtimes = await response.json();
+
+            const select = document.querySelector('select[name="showTimeId"]');
+            select.innerHTML = '<option value="">-- Chọn suất chiếu --</option>';
+
+            if (showtimes.length === 0) {
+                select.innerHTML += '<option value="" disabled>Không có suất nào</option>';
+            } else {
+                showtimes.forEach(s => {
+                    const option = document.createElement('option');
+                    option.value = s.value;           // ← QUAN TRỌNG: phải có value
+                    option.textContent = s.text;      // ← 14:00 - Phòng 1
+                    select.appendChild(option);
+                });
+            }
+
+            select.disabled = false; // reset trạng thái disable
+            enableButton();
+        } catch (err) {
+            console.error("Lỗi load suất chiếu:", err);
+        }
+    }
+
+    function clearFrom(start) {
+        const fields = ['date', 'showTimeId'];
+        const startIdx = fields.indexOf(start);
+        for (let i = startIdx; i < fields.length; i++) {
+            const el = document.querySelector(`select[name="${fields[i]}"]`);
+            if (el) {
+                el.innerHTML = `<option value="">-- Chọn ${i === 0 ? 'ngày' : 'suất'} --</option>`;
+                el.disabled = true;
+            }
+        }
+        enableButton();
+    }
+
+    function enableButton() {
+        const cinema = document.querySelector('select[name="cinemaId"]').value;
+        const movie = document.querySelector('select[name="movieId"]').value;
+        const date = document.querySelector('select[name="date"]').value;
+        const showTime = document.querySelector('select[name="showTimeId"]').value;
+        document.getElementById('submitBtn').disabled = !(cinema && movie && date && showTime);
+    }
+
+    // Auto-enable khi thay đổi
+    document.addEventListener('change', enableButton);
+</script>

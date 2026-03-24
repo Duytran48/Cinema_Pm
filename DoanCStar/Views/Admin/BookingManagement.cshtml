@@ -1,0 +1,64 @@
+﻿@model IEnumerable<DoanCStar.Models.Booking>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Quản lý đặt vé";
+}
+
+<h2 class="mb-4">Quản lý đặt vé</h2>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã vé</th>
+            <th>Người đặt</th>
+            <th>Phim</th>
+            <th>Rạp</th>
+            <th>Phòng</th>
+            <th>Ngày</th>
+            <th>Suất chiếu</th>
+            <th>Ghế</th>
+            <th>Tổng tiền</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            var seats = b.BookingSeats != null
+            ? string.Join(", ", b.BookingSeats.Select(s => $"{s.Seat.Row}{s.Seat.Number}"))
+            : "—";
+
+            <tr>
+                <td>@b.BookingCode</td>
+                <td>@b.User.FullName (@b.User.Email)</td>
+                <td>@b.ShowTime.Movie.Title</td>
+                <td>@b.ShowTime.Room.Cinema.Name</td>
+                <td>@b.ShowTime.Room.Name</td>
+                <td>@b.BookingDate.ToString("dd/MM/yyyy")</td>
+                <td>@b.ShowTime.StartTime.ToString("HH:mm")</td>
+                <td>@seats</td>
+                <td>@b.TotalPrice.ToString("N0") đ</td>
+
+                <td>
+                    <a asp-controller="Booking"
+                       asp-action="Edit"
+                       asp-route-id="@b.BookingId"
+                       class="btn btn-warning btn-sm">
+                        Sửa
+                    </a>
+
+                    <a asp-controller="Booking"
+                       asp-action="Delete"
+                       asp-route-id="@b.BookingId"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Bạn có chắc muốn xóa vé này?');">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

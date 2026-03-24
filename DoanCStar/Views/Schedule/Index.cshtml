@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Lịch Chiếu Phim - CGStar Cinema";
+    var culture = new System.Globalization.CultureInfo("vi-VN");
+    var dates = ViewBag.Dates as List<DateTime>;
+    var movies = ViewBag.Movies as List<dynamic>;
+    var cinemas = ViewBag.Cinemas as List<dynamic>;
+}
+
+<div class="container py-5">
+    <h1 class="text-center text-warning fw-bold mb-5 display-4">
+        LỊCH CHIẾU PHIM
+    </h1>
+
+    <!-- Bộ lọc đẹp, nằm ngang đều -->
+    <div class="card bg-dark border-warning shadow-lg mb-5">
+        <div class="card-body p-4">
+            <div class="row g-3 align-items-end">
+                <!-- Ngày -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label class="text-white fw-bold mb-2">
+                        Chọn ngày
+                    </label>
+                    <select id="dateFilter" class="form-select form-select-lg bg-secondary text-white border-warning">
+                        @foreach (var d in dates!)
+                        {
+                            var label = d.Date == DateTime.Today ? "Hôm nay" : d.ToString("dddd, dd/MM", culture);
+                             @:<option value="@d:yyyy-MM-dd" @(d.Date == DateTime.Today ? "selected" : "")> @label
+                        }
+                    </select>
+                </div>
+
+                <!-- Phim -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label class="text-white fw-bold mb-2">
+                        Chọn phim
+                    </label>
+                    <select id="movieFilter" class="form-select form-select-lg bg-secondary text-white border-warning">
+                        <option value="0">Tất cả phim</option>
+                        @foreach (var m in movies!)
+                        {
+                            <option value="@m.MovieId">@m.Title</option>
+                        }
+                    </select>
+                </div>
+
+                <!-- Rạp -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <label class="text-white fw-bold mb-2">
+                        Chọn rạp
+                    </label>
+                    <select id="cinemaFilter" class="form-select form-select-lg bg-secondary text-white border-warning">
+                        <option value="0">Tất cả rạp</option>
+                        @foreach (var c in cinemas!)
+                        {
+                            <option value="@c.CinemaId">@c.Name - @c.City</option>
+                        }
+                    </select>
+                </div>
+
+                <!-- Nút Làm mới -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <button onclick="loadShowtimes()" 
+                            class="btn btn-warning btn-lg fw-bold w-100 h-100 d-flex align-items-center justify-content-center gap-2 shadow">
+                        <i class="bi bi-arrow-clockwise"></i>
+                        LÀM MỚI
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Khu vực kết quả -->
+    <div id="showtimesResult">
+        <div class="text-center py-5">
+            <i class="bi bi-hourglass-split text-warning fs-1"></i>
+            <p class="text-white-50 mt-3 fs-4">Đang tải lịch chiếu...</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadShowtimes(); // Load lần đầu
+
+        // Tự động reload khi đổi bất kỳ filter nào
+        ['dateFilter', 'movieFilter', 'cinemaFilter'].forEach(id => {
+            document.getElementById(id).addEventListener('change', loadShowtimes);
+        });
+    });
+
+    async function loadShowtimes() {
+        const date = document.getElementById('dateFilter').value;
+        const movieId = document.getElementById('movieFilter').value || 0;
+        const cinemaId = document.getElementById('cinemaFilter').value || 0;
+
+        const url = `/Schedule/GetShowtimes?date=${date}&movieId=${movieId}&cinemaId=${cinemaId}&t=${Date.now()}`;
+
+        const container = document.getElementById('showtimesResult');
+        container.innerHTML = `
+            <div class="text-center py-5">
+                <i class="bi bi-hourglass-split text-warning fs-1"></i>
+                <p class="text-white-50 mt-3 fs-4">Đang tải lịch chiếu...</p>
+            </div>`;
+
+        try {
+            const res = await fetch(url);
+            const html = await res.text();
+            container.innerHTML = html;
+        } catch (err) {
+            container.innerHTML = `<div class="text-danger text-center py-5">Lỗi kết nối server!</div>`;
+        }
+    }
+</script>

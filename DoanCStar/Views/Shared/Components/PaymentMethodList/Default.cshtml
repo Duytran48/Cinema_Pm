@@ -1,0 +1,45 @@
+@model DoanCStar.ViewModels.PaymentViewModel
+@{
+    // Lấy danh sách phương thức từ C# code bạn đã viết
+    var methods = ViewBag.Methods as dynamic;
+}
+
+<div class="bg-white p-4 rounded shadow-sm border-top border-4 border-warning h-100">
+    <h4 class="fw-bold text-dark mb-4 text-uppercase">
+        <i class="bi bi-wallet2 text-warning"></i> Phương thức thanh toán
+    </h4>
+
+    <div class="mb-4">
+        <label class="form-label fw-bold text-dark mb-3">Chọn hình thức thanh toán:</label>
+        <div class="list-group">
+            @if (methods != null)
+            {
+                foreach (var item in methods)
+                {
+                    string val = item.Value;
+                    string txt = item.Text;
+
+                    // Logic chọn icon/ảnh minh họa
+                    string iconHtml = "";
+                    if (val == "MOMO") iconHtml = "<img src='/images/momo.png' style='width:35px; margin-right:15px;' onerror=\"this.style.display='none'\">";
+                    else if (val == "VNPAY" || val == "BANK" || val == "CARD") iconHtml = "<img src='/images/vnpay.png' style='width:35px; margin-right:15px;' onerror=\"this.style.display='none'\">";
+                    else iconHtml = "<i class='bi bi-cash-coin text-success fs-2 me-3' style='width:35px; text-align:center;'></i>";
+
+                    <label class="list-group-item list-group-item-action d-flex align-items-center p-3 border-secondary mb-2 rounded">
+                        <input class="form-check-input me-3 fs-5" type="radio" name="PaymentMethod" value="@val" @(val == "MOMO" ? "checked" : "")>
+                        @Html.Raw(iconHtml)
+                        <div>
+                            <h6 class="mb-0 fw-bold text-dark">@txt</h6>
+                        </div>
+                    </label>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="d-block d-lg-none mt-3">
+        <button type="submit" class="btn btn-warning w-100 py-3 fw-bold fs-5 shadow">
+            THANH TOÁN
+        </button>
+    </div>
+</div>

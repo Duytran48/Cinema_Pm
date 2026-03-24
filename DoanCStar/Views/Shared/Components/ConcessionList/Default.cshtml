@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DoanCStar.Models.Concession>
+
+<h4 class="text-warning fw-bold mb-4 border-bottom border-secondary pb-2">Bắp Nước & Combo</h4>
+
+<div class="concession-list">
+    @foreach (var item in Model)
+    {
+        <div class="concession-item d-flex align-items-center bg-dark p-3 rounded mb-3 border border-secondary">
+            <div class="concession-img me-3">
+                <img src="@item.ImageUrl" alt="@item.Name" class="rounded" style="width: 100px; height: 100px; object-fit: cover;">
+            </div>
+
+            <div class="concession-info flex-grow-1 text-white">
+                <h6 class="fw-bold mb-1">@item.Name</h6>
+                <p class="text-light small mb-2" style="font-size: 0.85rem;">
+                    @item.Description
+                </p>
+                <div class="text-warning fw-bold">@item.Price.ToString("N0") đ</div>
+            </div>
+
+            <div class="concession-actions">
+                <div class="input-group input-group-sm" style="width: 120px;">
+                    <button class="btn btn-outline-warning" type="button" onclick="updateQuantity(@item.ConcessionId, -1)">-</button>
+                    <input type="text" class="form-control text-center bg-dark text-white border-secondary qty-input"
+                           id="qty-@item.ConcessionId" value="0" readonly
+                           data-id="@item.ConcessionId" data-price="@item.Price" data-name="@item.Name">
+                    <button class="btn btn-outline-warning" type="button" onclick="updateQuantity(@item.ConcessionId, 1)">+</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,239 @@
+﻿@model DoanCStar.ViewModels.BookingViewModel
+
+@{
+    ViewData["Title"] = "Chọn ghế";
+    Layout = "_BookingLayout";
+
+    var rows = Model.Seats.GroupBy(s => s.Row).OrderBy(g => g.Key).ToList();
+    var bookedIds = Model.BookedSeatIds ?? new List<int>();
+}
+
+<div class="container py-5">
+
+
+
+    <div class="row">
+
+        <div class="col-lg-8 mb-4">
+            <div class="booking-main-content p-4 rounded shadow-sm">
+
+                <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary pb-3">
+                    <div>
+                        <h4 class="text-warning fw-bold m-0">@Model.CinemaName</h4>
+                        <span class="text-white-50">@Model.RoomName</span>
+                    </div>
+                    <div class="text-end text-white">
+
+                        <div class="fs-5">
+                            <span class="fw-bold text-warning">@Model.StartTime</span> ~
+                            <span class="fw-bold text-light">@Model.EndTime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen-area mb-5">
+                    <div class="screen-bar"></div>
+
+                </div>
+
+                <div class="seat-map-area d-flex flex-column align-items-center">
+                    @foreach (var rowGroup in rows)
+                    {
+                        <div class="d-flex justify-content-center mb-2 align-items-center w-100">
+                            <div class="row-label text-muted fw-bold me-3" style="width: 20px;">@rowGroup.Key</div>
+                            <div class="d-flex gap-2">
+                                @foreach (var seat in rowGroup.OrderBy(s => s.Number))
+                                {
+                                    var isBooked = bookedIds.Contains(seat.SeatId);
+                                    var typeClass = seat.SeatType.ToLower() + (isBooked ? " booked" : "");
+
+                                    <div class="seat-item @typeClass @(isBooked ? "disabled-seat" : "")"
+                                         data-id="@seat.SeatId"
+                                         data-name="@seat.Row@seat.Number"
+                                         data-price="@seat.Price"
+                                         data-type="@seat.SeatType"
+                                         onclick="toggleSeat(this)"
+                                         title="@seat.SeatType - @seat.Price.ToString("N0")đ">
+                                        @if (seat.SeatType == "Sweetbox")
+                                        {
+                                            <i class="bi bi-heart-fill text-white" style="font-size:10px"></i>
+                                        }
+                                        else
+                                        {
+
+                                            <span class="seat-num">@seat.Number</span>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="seat-legend mt-5 pt-4 border-top border-secondary d-flex justify-content-center gap-4 flex-wrap">
+                    <div class="d-flex align-items-center gap-2 text-white"><div class="seat-item standard" style="cursor: default;"></div> Thường</div>
+                    <div class="d-flex align-items-center gap-2 text-white"><div class="seat-item vip" style="cursor: default;"></div> VIP</div>
+                    <div class="d-flex align-items-center gap-2 text-white"><div class="seat-item sweetbox" style="cursor: default; width: 30px;"></div> Sweetbox</div>
+                    <div class="d-flex align-items-center gap-2 text-white"><div class="seat-item selected" style="cursor: default;"></div> Đang chọn</div>
+                    <div class="d-flex align-items-center gap-2 text-white"><div class="seat-item booked" style="cursor: default;"></div> Đã bán</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="booking-sidebar p-0 rounded shadow-sm sticky-top" style="top: 20px; z-index: 1020;">
+
+                <div class="d-flex p-3 border-bottom border-secondary bg-dark rounded-top">
+                    <img src="@Model.ImageUrl" alt="Poster" class="rounded" style="width: 80px; height: 120px; object-fit: cover;">
+                    <div class="ms-3">
+                        <h5 class="text-white fw-bold mb-1">@Model.MovieTitle</h5>
+
+                    </div>
+                </div>
+
+                <div class="p-3 bg-dark">
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Rạp:</span>
+                        <span class="text-white text-end">@Model.CinemaName</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Phòng:</span>
+                        <span class="text-white text-end">@Model.RoomName</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Suất chiếu:</span>
+                        <span class="text-white text-end">@Model.StartTime</span>
+                    </div>
+                    <hr class="border-secondary" />
+
+                    <div class="d-flex justify-content-between mb-2 text-white">
+                        <span class="fw-bold">Ghế chọn:</span>
+                        <span id="selectedSeatsText" class="fw-bold text-warning text-end text-break" style="max-width: 150px;">---</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-secondary">
+                        <span class="text-white fs-5">Tổng tiền:</span>
+                        <span id="totalPriceText" class="text-warning fw-bold fs-4">0 đ</span>
+                    </div>
+                </div>
+
+                <div class="p-3 bg-dark rounded-bottom d-grid gap-2">
+                    <form asp-controller="Booking" asp-action="SelectConcessions" method="post" id="bookingForm">
+                        <input type="hidden" name="ShowTimeId" value="@Model.ShowTimeId" />
+                        <input type="hidden" name="SelectedSeatIds" id="hiddenSeatIds" />
+                        <input type="hidden" name="TotalPrice" id="hiddenTotalPrice" />
+
+                        <button type="button" onclick="submitBooking()" class="btn btn-warning w-100 py-3 fw-bold fs-5 btn-booking-action" disabled>
+                            TIẾP TỤC
+                        </button>
+                    </form>
+
+                    <a asp-controller="Home" asp-action="MovieDetails" asp-route-id="@Model.MovieId" class="btn btn-outline-secondary w-100 fw-bold">
+                        QUAY LẠI
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let selectedSeats = [];
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy danh sách ghế cũ từ Model (chuỗi "1,2,3")
+            const preSelectedIds = "@Model.PreSelectedSeatIds";
+
+            if (preSelectedIds) {
+                const idsArray = preSelectedIds.split(',');
+                idsArray.forEach(id => {
+                    // Tìm phần tử ghế có data-id tương ứng
+                    const seatElement = document.querySelector(`.seat-item[data-id='${id}']`);
+                    if (seatElement && !seatElement.classList.contains('booked')) {
+                        // Giả lập sự kiện click hoặc gọi hàm toggleSeat
+                        toggleSeat(seatElement);
+                    }
+                });
+            }
+        });
+        function toggleSeat(element) {
+            if (element.classList.contains('booked')) return;
+
+            const seatId = element.getAttribute('data-id');
+            const seatName = element.getAttribute('data-name');
+            const seatPrice = parseFloat(element.getAttribute('data-price')) || 0;
+            const seatType = element.getAttribute('data-type');
+
+
+            if (element.classList.contains('selected')) {
+                element.classList.remove('selected');
+                selectedSeats = selectedSeats.filter(s => s.id !== seatId);
+
+                if (selectedSeats.length === 0) {
+                    currentSeatType = null;
+                }
+            }
+
+            else {
+
+                if (selectedSeats.length >= 8) {
+                    alert("Bạn chỉ được chọn tối đa 8 ghế.");
+                    return;
+                }
+
+
+                if (selectedSeats.length > 0 && currentSeatType !== seatType) {
+                    alert(`Bạn chỉ được chọn ghế cùng loại! Bạn đang chọn ghế ${currentSeatType}, không thể chọn thêm ghế ${seatType}.`);
+                    return;
+                }
+
+                if (selectedSeats.length === 0) {
+                    currentSeatType = seatType;
+                }
+
+                element.classList.add('selected');
+                selectedSeats.push({ id: seatId, name: seatName, price: seatPrice, type: seatType });
+            }
+
+            updateBookingInfo();
+        }
+
+        function updateBookingInfo() {
+            const seatTextEl = document.getElementById('selectedSeatsText');
+            const priceTextEl = document.getElementById('totalPriceText');
+            const hiddenIds = document.getElementById('hiddenSeatIds');
+            const hiddenPrice = document.getElementById('hiddenTotalPrice');
+            const btnAction = document.querySelector('.btn-booking-action');
+
+            if (selectedSeats.length === 0) {
+                seatTextEl.innerText = "---";
+                priceTextEl.innerText = "0 đ";
+                hiddenIds.value = "";
+                hiddenPrice.value = 0;
+                btnAction.disabled = true;
+                return;
+            }
+
+            btnAction.disabled = false;
+            selectedSeats.sort((a, b) => a.name.localeCompare(b.name, undefined, {numeric: true}));
+            const names = selectedSeats.map(s => s.name).join(', ');
+            const total = selectedSeats.reduce((sum, s) => sum + s.price, 0);
+
+            seatTextEl.innerText = names;
+            priceTextEl.innerText = total.toLocaleString('vi-VN') + " đ";
+
+            hiddenIds.value = selectedSeats.map(s => s.id).join(',');
+            hiddenPrice.value = total;
+        }
+
+        function submitBooking() {
+            if (selectedSeats.length === 0) {
+                alert("Vui lòng chọn ít nhất 1 ghế!");
+                return;
+            }
+            document.getElementById('bookingForm').submit();
+        }
+    </script>
+}

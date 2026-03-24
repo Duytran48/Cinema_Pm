@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DoanCStar.Models.Concession>
+
+@{
+    ViewData["Title"] = "Quản lý Bắp Nước";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Bắp Nước </h1> <ol class="breadcrumb mb-4">
+    </ol>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="fas fa-tags me-1"></i> Danh sách sản phẩm</h5>
+            <a asp-action="Create" class="btn btn-primary btn-sm">
+                <i class="fas fa-plus"></i> Thêm mới sản phẩm
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead style="background: linear-gradient(to right, #ff758c, #8e44ad) !important;">
+                        <tr>
+                            <th class="text-center text-white" style="background: transparent !important; width: 120px;">Hình ảnh</th>
+                            <th class="text-white" style="background: transparent !important;">Tên sản phẩm</th>
+                            <th class="text-white" style="background: transparent !important;">Giá bán</th>
+                            <th class="text-center text-white" style="background: transparent !important;">Phân loại</th>
+                            <th class="text-center text-white" style="background: transparent !important; width: 150px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    {
+                                        <img src="@item.ImageUrl" alt="@item.Name" class="img-thumbnail" style="max-height: 80px; max-width: 100px;" />
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted small"><i class="fas fa-image"></i> Không có ảnh</span>
+                                    }
+                                </td>
+                                <td class="fw-bold text-primary">
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td class="text-danger fw-bold">
+                                    @item.Price.ToString("N0") VNĐ
+                                </td>
+                                <td class="text-center">
+                                    @if (item.IsCombo)
+                                    {
+                                        <span class="badge bg-success rounded-pill">Combo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary rounded-pill">Món lẻ</span>
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="Edit" asp-route-id="@item.ConcessionId" class="btn btn-outline-warning btn-sm" title="Sửa">
+                                            <i class="fas fa-edit"></i> Sửa
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.ConcessionId" class="btn btn-outline-danger btn-sm" title="Xóa">
+                                            <i class="fas fa-trash-alt"></i> Xóa
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

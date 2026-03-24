@@ -1,0 +1,33 @@
+﻿@using DoanCStar.Models
+@model List<Movie>
+
+@if (Model == null || !Model.Any())
+{
+    <p class="text-center text-muted py-5">Hiện chưa có phim nào.</p>
+}
+else
+{
+    <div class="row g-4">
+        @foreach (var movie in Model)
+        {
+            <div class="col-md-3 col-6">
+                <div class="card h-100 bg-dark text-white border-0 shadow">
+                    <img src="@movie.ImageUrl" class="card-img-top" alt="@movie.Title" style="height: 350px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-warning">@movie.Title</h5>
+                        <p class="card-text small text-center">
+                            @movie.Genre • @movie.Duration phút
+                        </p>
+                        <div class="mt-auto text-center">
+                            <a asp-controller="Booking" asp-action="SelectSeats"
+                               asp-route-showTimeId="0"
+                               class="btn btn-warning btn-sm">
+                                XEM LỊCH CHIẾU
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,574 @@
+﻿@* File: Views/Shared/_Layout.cshtml *@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Hệ thống bán vé rẻ , hiện đại bậc nhất</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" aaaa/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <partial name="_PageStyles" />
+
+</head>
+<body>
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand" href="/">
+                <img src="/images/CN_Logo.png" alt="CineStar" />
+            </a>
+
+            <div class="d-flex gap-2">
+                <a asp-controller="Home"
+                   asp-action="Booking"
+                   class="btn btn-animate btn-ticket">
+                    <i class="bi bi-ticket-perforated"></i> ĐẶT VÉ NGAY
+                </a>
+                <a class="btn btn-animate btn-snack" asp-controller="Snacks" asp-action="Index" style="text-decoration: none; display: flex; align-items: center;">
+                    <i class="bi bi-cup-hot me-1"></i> ĐẶT BẮP NƯỚC
+                </a>
+
+            </div>
+            @* Nút đăng nhập / Xin chào *@
+            <div class="d-flex align-items-center gap-3">
+                <div class="position-relative search-container">
+                    <input type="text"
+                           id="globalSearch"
+                           class="search-bar form-control"
+                           placeholder="Tìm phim, rạp..."
+                           autocomplete="off" />
+
+                    <!-- Dropdown gợi ý -->
+                    <div id="searchResults"
+                         class="position-absolute top-100 start-0 end-0 bg-dark border border-warning shadow-lg mt-1 rounded-3 overflow-hidden"
+                         style="z-index: 9999; max-height: 70vh; overflow-y: auto; display: none;">
+
+                        <div class="p-3 text-center text-muted" id="searchEmpty" style="display:none;">
+                            Không tìm thấy kết quả nào
+                        </div>
+
+                        <div id="searchLoading" class="p-3 text-center text-warning" style="display:none;">
+                            <i class="bi bi-hourglass-split"></i> Đang tìm...
+                        </div>
+                    </div>
+                </div>                @if (User.Identity.IsAuthenticated)
+                {
+
+                    <div class="dropdown user-dropdown">
+
+                        <a href="#" class="user-trigger d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle me-1"></i>
+                            Xin chào, @User.Identity.Name
+                        </a>
+
+                        <ul class="dropdown-menu user-dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+                                    <i class="bi bi-person me-2"></i>
+                                    Thông tin cá nhân
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="Account" asp-action="Logout">
+                                    <i class="bi bi-box-arrow-right me-2"></i>
+                                    Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                }
+                                else
+                {
+                    @* NẾU CHƯA ĐĂNG NHẬP: Hiển thị nút "Đăng nhập" (mở Modal) *@
+                    <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal">
+                        <i class="bi bi-person-circle"></i> Đăng nhập
+                    </a>
+                }
+                <div class="lang-switch">
+                    <div class="lang-trigger d-flex align-items-center text-white text-decoration-none">
+                        <img src="https://flagcdn.com/w20/vn.png" alt="VN" class="lang-flag me-1" />
+                        <span>VN</span>
+                        <i class="ms-1 bi bi-caret-down-fill"></i>
+                    </div>
+                    <ul class="lang-dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="lang-flag me-1" />
+                                English
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="subnav container">
+            <div class="subnav-left">
+                @* KHỐI DROPDOWN "CHỌN RẠP" *@
+                <div class="dropdown cinema-dropdown">
+                    <a href="#" class="subnav-link dropdown-toggle" role="button">
+                        <i class="bi bi-geo-alt"></i> Chọn rạp
+                    </a>
+                    <div class="dropdown-menu cinema-dropdown-menu shadow">
+                        @await Component.InvokeAsync("CinemaList")
+                    </div>
+                </div>
+                @* LINK "LỊCH CHIẾU" *@
+                <a asp-controller="Schedule" asp-action="Index" class="subnav-link">
+                    <i class="bi bi-calendar-week"></i> Lịch chiếu
+                </a>
+            </div>
+            <div class="subnav-right">
+                <a href="#" class="subnav-link">Khuyến mãi</a>
+                <a href="#" class="subnav-link">Tổ chức sự kiện</a>
+                <a href="#" class="subnav-link">Dịch vụ giải trí khác</a>
+                <a href="#" class="subnav-link">Giới thiệu</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @* Modal đăng nhập/đăng ký *@
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-pane" type="button" role="tab" aria-controls="login-pane" aria-selected="true">
+                                Đăng nhập
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-pane" type="button" role="tab" aria-controls="register-pane" aria-selected="false">
+                                Đăng ký
+                            </button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content" id="authTabsContent">
+                        @* Phần đăng nhập *@
+                        <div class="tab-pane fade show active" id="login-pane" role="tabpanel" aria-labelledby="login-tab">
+                            <div id="loginError" class="alert alert-danger" role="alert" style="display: none;">
+                            </div>
+                            <form id="loginForm" asp-controller="Account" asp-action="Login" method="post">
+                                <div class="mb-3">
+                                    <label for="loginIdentifier" class="form-label">Email, SĐT, hoặc Tên đăng nhập</label>
+                                    <input type="text" class="form-control" id="loginIdentifier" name="Identifier" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="loginPassword" name="Password" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe" name="RememberMe" value="true">
+                                    <label class="form-check-label" for="rememberMe">Ghi nhớ tôi</label>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100 fw-bold">
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                                    <span class="button-text">ĐĂNG NHẬP</span>
+                                </button>
+                                <div class="text-center mt-3">
+                                    <a href="#" class="text-warning text-decoration-none">Quên mật khẩu?</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        @* Phần đăng ký *@
+                        <div class="tab-pane fade" id="register-pane" role="tabpanel" aria-labelledby="register-tab">
+                            <div id="registerError" class="alert alert-danger" role="alert" style="display: none;">
+                            </div>
+                            <form id="registerForm" asp-controller="Account" asp-action="Register" method="post">
+                                <div class="mb-3">
+                                    <label for="registerName" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" id="registerName" name="FullName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="registerEmail" name="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPhone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" id="registerPhone" name="Phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="registerPassword" name="Password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                                    <input type="password" class="form-control" id="confirmPassword" name="ConfirmPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100 fw-bold">ĐĂNG KÝ</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* footer *@
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="footer-heading">VỀ CGSTAR</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Hệ thống rạp</a></li>
+                        <li><a href="#" class="footer-link">Cụm rạp</a></li>
+                        <li><a href="#" class="footer-link">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="footer-heading">QUY ĐỊNH & ĐIỀU KHOẢN</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Quy định thành viên</a></li>
+                        <li><a href="#" class="footer-link">Điều khoản</a></li>
+                        <li><a href="#" class="footer-link">Hướng dẫn đặt vé trực tuyến</a></li>
+                        <li><a href="#" class="footer-link">Quy định và chính sách chung</a></li>
+                        <li><a href="#" class="footer-link">Chính sách bảo vệ thông tin cá nhân</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h6 class="footer-heading">CHĂM SÓC KHÁCH HÀNG</h6>
+                    <ul class="list-unstyled footer-contact">
+                        <li><strong>Hotline:</strong> 19002099</li>
+                        <li><strong>Giờ làm việc:</strong> 9:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ, Tết)</li>
+                        <li><strong>Email hỗ trợ:</strong> cskh@cgstar.vn</li>
+                    </ul>
+
+                    <h6 class="footer-heading mt-4">MẠNG XÃ HỘI</h6>
+                    <div class="d-flex gap-3 social-icons">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center d-none d-lg-block">
+                    @* Dùng logo của bạn *@
+                    <img src="/images/CN_Logo.png" alt="CineStar" style="height: 80px; margin-top: 20px;">
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row footer-copyright">
+                <div class="col-md-2 text-center text-md-start mb-3 mb-md-0">
+                    <img src="/images/CN_Logo.png" alt="Logo" style="height: 60px;">
+                </div>
+                <div class="col-md-10">
+                    <p class="mb-1"><strong>CÔNG TY TNHH MTV CGStar</strong></p>
+                    <p class="mb-1">Giấy CNĐKDN: Giấy phép kinh doanh số: 9999999. Đăng ký lần đầu ngày 20 tháng 09 năm 2025</p>
+                    <p class="mb-1">Địa Chỉ:828 Sư Vạn Hạnh, Phường Hòa Hưng, Quận 10, Thành phố Hồ Chí Minh </p>
+                    <p class="mb-1">Hotline: 123456789jqk</p>
+                    <p class="mb-0">COPYRIGHT 2025 CGStar. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-black text-white border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="trailerModalLabel">Trailer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="trailerIframe" src="" title="YouTube video" allowfullscreen allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    @* === SCRIPT XỬ LÝ FORM ĐĂNG NHẬP VÀ ĐĂNG KÝ === *@
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // === XỬ LÝ FORM ĐĂNG NHẬP ===
+            const loginForm = document.getElementById("loginForm");
+
+            if (loginForm) {
+                const loginError = document.getElementById("loginError");
+                const loginInputs = loginForm.querySelectorAll("input");
+                const loginButton = loginForm.querySelector('button[type="submit"]');
+
+                loginForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(loginForm);
+
+                    loginButton.disabled = true;
+                    loginButton.classList.add("btn-loading");
+                    if (loginError) loginError.style.display = 'none';
+
+                    fetch(loginForm.action, {
+                        method: "POST",
+                        body: new URLSearchParams(formData)
+                    })
+                    .then(response => {
+                        return response.json().then(data => ({ ok: response.ok, data: data }));
+                    })
+                    .then(result => {
+                        if (result.ok) {
+                            if (result.data.redirectUrl) {
+                                window.location.href = result.data.redirectUrl;
+                            } else {
+                                window.location.reload();
+                            }
+                        } else {
+                            if (result.data.message) {
+                                loginError.textContent = result.data.message;
+                                loginError.style.display = "block";
+                            }
+                            loginButton.disabled = false;
+                            loginButton.classList.remove("btn-loading");
+                        }
+                    })
+                    .catch(err => {
+                        loginError.textContent = "Không thể kết nối. Vui lòng thử lại.";
+                        loginError.style.display = "block";
+                        loginButton.disabled = false;
+                        loginButton.classList.remove("btn-loading");
+                    });
+                });
+
+                loginInputs.forEach(input => {
+                    input.addEventListener("input", function() {
+                        if (loginError.style.display === "block") {
+                            loginError.style.display = "none";
+                        }
+                    });
+                });
+            }
+
+            // === XỬ LÝ FORM ĐĂNG KÝ ===
+            const registerForm = document.getElementById("registerForm");
+
+            if (registerForm) {
+                const registerError = document.getElementById("registerError");
+                const registerInputs = registerForm.querySelectorAll("input");
+
+                registerForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(registerForm);
+
+                    fetch(registerForm.action, {
+                        method: "POST",
+                        body: new URLSearchParams(formData)
+                    })
+                    .then(response => {
+                        return response.json().then(data => ({ ok: response.ok, data: data }));
+                    })
+                    .then(result => {
+                        if (result.ok) {
+                            if (result.data.redirectUrl) {
+                                window.location.href = result.data.redirectUrl;
+                            } else {
+                                window.location.reload();
+                            }
+                        } else {
+                            if (result.data.message) {
+                                registerError.textContent = result.data.message;
+                                registerError.style.display = "block";
+                            }
+                        }
+                    })
+                    .catch(err => {
+                        registerError.textContent = "Không thể kết nối. Vui lòng thử lại.";
+                        registerError.style.display = "block";
+                    });
+                });
+
+                registerInputs.forEach(input => {
+                    input.addEventListener("input", function() {
+                        if (registerError.style.display === "block") {
+                            registerError.style.display = "none";
+                        }
+                    });
+                });
+            }
+
+        });
+    </script>
+    @* === SCRIPT XỬ LÝ MODAL TRAILER PHIM === *@
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Lấy tất cả các nút có class 'js-play-trailer'
+            const trailerButtons = document.querySelectorAll('.js-play-trailer');
+            const trailerModal = new bootstrap.Modal(document.getElementById('trailerModal'));
+            const trailerIframe = document.getElementById('trailerIframe');
+            const trailerTitle = document.getElementById('trailerModalLabel');
+            const modalElement = document.getElementById('trailerModal');
+
+            trailerButtons.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const url = this.getAttribute('data-trailer-url');
+                    const title = this.getAttribute('data-movie-title');
+
+                    // 2. Hàm lấy YouTube ID từ URL
+                    const videoId = getYouTubeId(url);
+
+                    if (videoId) {
+                        // 3. Tạo link Embed và thêm autoplay=1 để tự chạy
+                        const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+                        // Gán link vào iframe
+                        trailerIframe.src = embedUrl;
+                        if(title) trailerTitle.textContent = title;
+
+                        // Hiện modal
+                        trailerModal.show();
+                    } else {
+                        alert("Link trailer không hợp lệ hoặc chưa được cập nhật.");
+                    }
+                });
+            });
+
+            // 4. Khi đóng Modal thì tắt video (xóa src)
+            modalElement.addEventListener('hidden.bs.modal', function () {
+                trailerIframe.src = "";
+            });
+
+            // Hàm phụ trợ: Tách ID video từ link YouTube các kiểu
+            function getYouTubeId(url) {
+                if (!url) return null;
+                const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+                const match = url.match(regExp);
+                return (match && match[2].length === 11) ? match[2] : null;
+            }
+        });
+    </script>
+
+    <style>
+        .search-bar {
+            background: rgba(0,0,0,0.6) !important;
+            border: 2px solid #ffd700 !important;
+            color: white !important;
+            border-radius: 30px !important;
+            padding: 10px 20px !important;
+            width: 300px;
+        }
+
+            .search-bar:focus {
+                box-shadow: 0 0 15px rgba(255,215,0,0.5) !important;
+                background: rgba(0,0,0,0.8) !important;
+            }
+
+        .search-result-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid #333;
+            transition: all 0.2s;
+        }
+
+            .search-result-item:hover {
+                background: #ffd700 !important;
+                color: #000 !important;
+            }
+
+        .search-movie-img {
+            width: 50px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    </style>
+    @* === SCRIPT XỬ LÝ TÌM KIẾM PHIM === *@
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("globalSearch");
+            const resultsBox = document.getElementById("searchResults");
+            const emptyMsg = document.getElementById("searchEmpty");
+            const loadingMsg = document.getElementById("searchLoading");
+            let timeout = null;
+
+            searchInput.addEventListener("input", function () {
+                const q = this.value.trim();
+                clearTimeout(timeout);
+
+                if (q.length < 2) {
+                    resultsBox.style.display = "none";
+                    return;
+                }
+
+                timeout = setTimeout(async () => {
+                    loadingMsg.style.display = "block";
+                    emptyMsg.style.display = "none";
+                    resultsBox.style.display = "block";
+                    resultsBox.innerHTML = '<div id="searchLoading" class="p-3 text-center text-warning"><i class="bi bi-hourglass-split"></i> Đang tìm...</div>';
+
+                    try {
+                        const res = await fetch(`/Search/Suggestions?q=${encodeURIComponent(q)}`);
+                        const data = await res.json();
+
+                        resultsBox.innerHTML = "";
+
+                        if (data.movies.length === 0 && data.cinemas.length === 0) {
+                            resultsBox.innerHTML = '<div class="p-3 text-center text-muted">Không tìm thấy kết quả nào</div>';
+                            return;
+                        }
+
+                        // Phim
+                        data.movies.forEach(m => {
+                            const div = document.createElement("a");
+                            div.href = m.url;
+                            div.className = "d-flex align-items-center search-result-item text-white text-decoration-none";
+                            div.innerHTML = `
+                                <img src="${m.image}" class="search-movie-img me-3" onerror="this.src='/images/no-image.jpg'">
+                                <div>
+                                    <strong>${m.title}</strong><br>
+                                    <small class="text-warning"><i class="bi bi-film"></i> Phim</small>
+                                </div>
+                            `;
+                            resultsBox.appendChild(div);
+                        });
+
+                        // Rạp
+                        data.cinemas.forEach(c => {
+                            const div = document.createElement("a");
+                            div.href = c.url;
+                            div.className = "d-block search-result-item text-white text-decoration-none";
+                            div.innerHTML = `
+                                <strong>${c.name}</strong> - ${c.city}<br>
+                                <small class="text-success"><i class="bi bi-geo-alt-fill"></i> Rạp chiếu</small>
+                            `;
+                            resultsBox.appendChild(div);
+                        });
+
+                    } catch (err) {
+                        resultsBox.innerHTML = '<div class="p-3 text-center text-danger">Lỗi kết nối</div>';
+                    }
+                }, 300);
+            });
+
+            // Ẩn khi click ra ngoài
+            document.addEventListener("click", function (e) {
+                if (!searchInput.contains(e.target) && !resultsBox.contains(e.target)) {
+                    resultsBox.style.display = "none";
+                }
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

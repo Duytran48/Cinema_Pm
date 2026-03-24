@@ -1,0 +1,513 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\DoanCStar.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DoanCStar.d996rh2smg.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\Bida.png",
+      "PackagePath": "staticwebassets\\images\\Bida.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\Bowling.png",
+      "PackagePath": "staticwebassets\\images\\Bowling.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\CN_Logo.png",
+      "PackagePath": "staticwebassets\\images\\CN_Logo.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\Food.png",
+      "PackagePath": "staticwebassets\\images\\Food.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\Gym.png",
+      "PackagePath": "staticwebassets\\images\\Gym.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\HSSV-2_promo.png",
+      "PackagePath": "staticwebassets\\images\\HSSV-2_promo.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\KidZone.png",
+      "PackagePath": "staticwebassets\\images\\KidZone.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\Opera.png",
+      "PackagePath": "staticwebassets\\images\\Opera.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\Promo3.png",
+      "PackagePath": "staticwebassets\\images\\Promo3.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\banner-web.png",
+      "PackagePath": "staticwebassets\\images\\banner-web.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\banner_AD.png",
+      "PackagePath": "staticwebassets\\images\\banner_AD.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\chaching2.png",
+      "PackagePath": "staticwebassets\\images\\chaching2.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\chi-nga-em-nang-banner.png",
+      "PackagePath": "staticwebassets\\images\\chi-nga-em-nang-banner.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\008c9ade-54cc-4403-a41f-53b8fa6e8a37_zootopia2.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\008c9ade-54cc-4403-a41f-53b8fa6e8a37_zootopia2.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\3b358e1c-4e8f-414c-8b03-df4e1417f0f6_Screenshot 2025-11-25 155648.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\3b358e1c-4e8f-414c-8b03-df4e1417f0f6_Screenshot 2025-11-25 155648.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\771b97c7-eb70-4d03-bd7a-9fbb4d81c5fa_Screenshot 2025-11-25 155750.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\771b97c7-eb70-4d03-bd7a-9fbb4d81c5fa_Screenshot 2025-11-25 155750.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\772ae9e6-07ce-44d6-86f6-454c0078bb82_2020-ducati-superleggera-v4.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\772ae9e6-07ce-44d6-86f6-454c0078bb82_2020-ducati-superleggera-v4.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\8992d9f5-20a5-4a79-a2c8-631c2a124a26_Combo1.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\8992d9f5-20a5-4a79-a2c8-631c2a124a26_Combo1.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\94c4033a-ca30-418b-954e-87d86acf0d2b_1.jpg",
+      "PackagePath": "staticwebassets\\images\\concessions\\94c4033a-ca30-418b-954e-87d86acf0d2b_1.jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\98997dee-1a07-4ef3-a74e-9d9b43f4b560_COmbo2.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\98997dee-1a07-4ef3-a74e-9d9b43f4b560_COmbo2.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\a8513d2a-253e-404c-b459-cb3e92cdc18a_dong10.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\a8513d2a-253e-404c-b459-cb3e92cdc18a_dong10.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\bc40a1c6-d924-4065-807a-d6b6f184cf57_1 (1).jpg",
+      "PackagePath": "staticwebassets\\images\\concessions\\bc40a1c6-d924-4065-807a-d6b6f184cf57_1 (1).jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\e89c4dd7-01eb-42fd-bb6a-ea3225239933_Combo1.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\e89c4dd7-01eb-42fd-bb6a-ea3225239933_Combo1.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\concessions\\f10ea220-9b62-408d-bb00-b22d7f9e20c4_Courage.png",
+      "PackagePath": "staticwebassets\\images\\concessions\\f10ea220-9b62-408d-bb00-b22d7f9e20c4_Courage.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\cuc-vang-cua-ngoai-banner.png",
+      "PackagePath": "staticwebassets\\images\\cuc-vang-cua-ngoai-banner.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\deadpool3.jpg",
+      "PackagePath": "staticwebassets\\images\\deadpool3.jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\header-logo.png",
+      "PackagePath": "staticwebassets\\images\\header-logo.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\images\\promo1.png",
+      "PackagePath": "staticwebassets\\images\\promo1.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\04672470-d771-4842-9e31-35bcffa2d61f.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\04672470-d771-4842-9e31-35bcffa2d61f.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\0491d4c8-5377-40f4-8974-8caef806aea1.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\0491d4c8-5377-40f4-8974-8caef806aea1.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\2364b643-cdc0-4cae-887e-1dfc8e1b5b4d.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\2364b643-cdc0-4cae-887e-1dfc8e1b5b4d.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\23b2cc62-0606-4882-9133-9fb48afe1103.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\23b2cc62-0606-4882-9133-9fb48afe1103.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\32fbe2b4-88fa-4fc7-9df5-f21b0d53b831.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\32fbe2b4-88fa-4fc7-9df5-f21b0d53b831.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\409e85cf-8d9f-444f-b773-833d97382fbb.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\409e85cf-8d9f-444f-b773-833d97382fbb.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\4769adf5-c337-4f64-97f9-25b85c7f1d4f.JPG",
+      "PackagePath": "staticwebassets\\uploads\\movies\\4769adf5-c337-4f64-97f9-25b85c7f1d4f.JPG"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\4dd1280b-63b9-4142-998a-bed3a9b2922c.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\4dd1280b-63b9-4142-998a-bed3a9b2922c.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\57d0ba38-398a-47ad-aeb8-ee8a29f8ea0e.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\57d0ba38-398a-47ad-aeb8-ee8a29f8ea0e.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\5f43e2eb-b377-449b-ade1-aaa3bc475ae7.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\5f43e2eb-b377-449b-ade1-aaa3bc475ae7.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\73995fbd-bc65-499e-a991-113c8f638c53.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\73995fbd-bc65-499e-a991-113c8f638c53.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\74639ec5-f08d-4a3c-9aea-f9819e8e7559.JPG",
+      "PackagePath": "staticwebassets\\uploads\\movies\\74639ec5-f08d-4a3c-9aea-f9819e8e7559.JPG"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\74c554f2-4ab2-4037-a210-d87638d041a0.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\74c554f2-4ab2-4037-a210-d87638d041a0.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\74d54834-000e-424c-99ac-d89f156714e4.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\74d54834-000e-424c-99ac-d89f156714e4.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\7aa53f64-427f-4681-8309-63b91398e0a5.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\7aa53f64-427f-4681-8309-63b91398e0a5.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\8d82a11f-2ce6-42be-9134-fb2ae44f48e8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\movies\\8d82a11f-2ce6-42be-9134-fb2ae44f48e8.jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\93b571e6-e64f-4a1d-b68a-88682f4c1233.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\93b571e6-e64f-4a1d-b68a-88682f4c1233.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\96082edc-a90a-4d86-beb1-e6bd31d60d1f.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\96082edc-a90a-4d86-beb1-e6bd31d60d1f.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\a49f7b57-11e4-403d-8c5a-7343a3c1476b.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\a49f7b57-11e4-403d-8c5a-7343a3c1476b.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\a7b391b0-4c44-4f9f-a021-de4da9079ff7.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\a7b391b0-4c44-4f9f-a021-de4da9079ff7.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\aec43394-7f01-4ec4-8960-d697cca7fa70.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\aec43394-7f01-4ec4-8960-d697cca7fa70.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\b8451c25-6570-4664-a01b-b1cc125ddb8d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\movies\\b8451c25-6570-4664-a01b-b1cc125ddb8d.jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\c3c6a517-e7a1-4f7b-ab65-850cfe0f7bdc.JPG",
+      "PackagePath": "staticwebassets\\uploads\\movies\\c3c6a517-e7a1-4f7b-ab65-850cfe0f7bdc.JPG"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\ca50d438-e558-4a37-9ef2-a193a34e1b17.jpg",
+      "PackagePath": "staticwebassets\\uploads\\movies\\ca50d438-e558-4a37-9ef2-a193a34e1b17.jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\ca814b8c-b8ed-42de-81f5-13ce74810d10.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\ca814b8c-b8ed-42de-81f5-13ce74810d10.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\cd8517b6-bd24-497a-9e14-f937c40eac1c.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\cd8517b6-bd24-497a-9e14-f937c40eac1c.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\d2fa5918-f39d-4fef-8283-8a61f533d71c.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\d2fa5918-f39d-4fef-8283-8a61f533d71c.png"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\d5eb8fe2-3b1b-44b0-803e-1b31e13d4926.jpg",
+      "PackagePath": "staticwebassets\\uploads\\movies\\d5eb8fe2-3b1b-44b0-803e-1b31e13d4926.jpg"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\e9bc6265-a0de-49fc-b5b3-3baadee025b3.webp",
+      "PackagePath": "staticwebassets\\uploads\\movies\\e9bc6265-a0de-49fc-b5b3-3baadee025b3.webp"
+    },
+    {
+      "Id": "D:\\LTWNC\\DoanCStar_final\\DoanCStar\\wwwroot\\uploads\\movies\\fdd4eeea-dd5b-4ad2-838c-dcce16ae4e30.png",
+      "PackagePath": "staticwebassets\\uploads\\movies\\fdd4eeea-dd5b-4ad2-838c-dcce16ae4e30.png"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.DoanCStar.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.DoanCStar.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.DoanCStar.props",
+      "PackagePath": "build\\DoanCStar.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.DoanCStar.props",
+      "PackagePath": "buildMultiTargeting\\DoanCStar.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.DoanCStar.props",
+      "PackagePath": "buildTransitive\\DoanCStar.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,186 @@
+﻿@model DoanCStar.ViewModels.BookingEditViewModel
+
+@{
+    ViewData["Title"] = "Sửa vé";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h2 class="mb-4 fw-bold text-primary">SỬA ĐƠN ĐẶT VÉ</h2>
+
+    @* SỬA Ở ĐÂY: Dùng MovieTitle thay vì ShowTime.Movie.Title *@
+    <h5 class="text-white-50">Mã vé: @Model.BookingId | Phim: @Model.MovieTitle</h5>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger">@Model.ErrorMessage</div>
+    }
+
+    <form asp-action="EditBooking" method="post" id="editBookingForm">
+        <input type="hidden" asp-for="BookingId" />
+        <input type="hidden" asp-for="SelectedNewSeatIds" id="hiddenSelectedNewSeatIds" />
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-secondary text-white">
+                        Thông tin hiện tại
+                    </div>
+                    <div class="card-body">
+                        @* SỬA CÁC DÒNG DƯỚI ĐÂY *@
+                        <p><strong>Rạp:</strong> @Model.CinemaName</p>
+                        <p><strong>Phòng:</strong> @Model.RoomName</p>
+                        <p><strong>Suất chiếu cũ:</strong> @Model.CurrentShowTimeText</p>
+
+                        <p><strong>Ghế cũ:</strong> <span class="badge bg-primary">@Model.SeatNamesString</span></p>
+                        <p><strong>Tổng tiền cũ:</strong> <span class="text-danger fw-bold">@Model.CurrentTotalPrice.ToString("N0") VNĐ</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-warning text-dark">
+                        Chọn suất chiếu mới
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label asp-for="NewShowTimeId" class="form-label">Suất chiếu thay thế</label>
+                            <select asp-for="NewShowTimeId" asp-items="@Model.AvailableShowTimes" id="cboNewShowTime" class="form-select"></select>
+                        </div>
+                        <div id="seatMapContainer">
+                            <p class="text-muted">Chọn suất chiếu mới để tải sơ đồ ghế.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end mt-3">
+            <a asp-action="BookingManagement" class="btn btn-secondary me-2">Quay lại</a>
+            <button type="submit" id="btnSaveBooking" class="btn btn-success btn-lg" disabled>
+                <i class="bi bi-save"></i> LƯU THAY ĐỔI
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <style>
+        .seat-map {
+            display: grid;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .seat-row {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+
+        .seat-item {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+            .seat-item.booked {
+                background-color: #dc3545;
+                color: white;
+                cursor: not-allowed;
+            }
+
+            .seat-item.selected {
+                background-color: #28a745;
+                color: white;
+            }
+
+            .seat-item:hover:not(.booked) {
+                background-color: #ffc107;
+            }
+    </style>
+
+    <script>
+        let selectedIds = [];
+        const basePrice = 0;
+
+        $(document).ready(function() {
+            // Tự động tải sơ đồ ghế của suất chiếu đang chọn (mặc định là suất cũ)
+            loadSeatMap($("#cboNewShowTime").val());
+
+            // Khi đổi suất chiếu -> Tải lại sơ đồ
+            $("#cboNewShowTime").change(function() {
+                loadSeatMap($(this).val());
+            });
+        });
+
+        function loadSeatMap(showTimeId) {
+            $("#seatMapContainer").html('<p>Đang tải sơ đồ...</p>');
+            selectedIds = []; // Reset ghế chọn
+            updateHiddenInput();
+
+            $.get("/Admin/GetSeatMap?showTimeId=" + showTimeId, function(data) {
+                if (!data) {
+                    $("#seatMapContainer").html('<p class="text-danger">Lỗi tải sơ đồ.</p>');
+                    return;
+                }
+
+                let html = '<div class="seat-map">';
+                let currentRow = '';
+
+                // Vẽ sơ đồ ghế đơn giản
+                data.seats.forEach(seat => {
+                    if (seat.row !== currentRow) {
+                        if (currentRow !== '') html += '</div>'; // Đóng hàng cũ
+                        html += `<div class="seat-row">`; // Mở hàng mới
+                        currentRow = seat.row;
+                    }
+
+                    let isBooked = data.bookedIds.includes(seat.seatId);
+                    let className = isBooked ? 'seat-item booked' : 'seat-item';
+
+                    html += `<div class="${className}"
+                                  data-id="${seat.seatId}"
+                                  onclick="toggleSeat(this)">
+                                  ${seat.row}${seat.number}
+                             </div>`;
+                });
+                html += '</div></div>'; // Đóng hàng cuối và container
+
+                $("#seatMapContainer").html(html);
+            });
+        }
+
+        function toggleSeat(el) {
+            if ($(el).hasClass('booked')) return;
+
+            let id = $(el).data('id').toString();
+
+            if ($(el).hasClass('selected')) {
+                $(el).removeClass('selected');
+                selectedIds = selectedIds.filter(x => x !== id);
+            } else {
+                $(el).addClass('selected');
+                selectedIds.push(id);
+            }
+            updateHiddenInput();
+        }
+
+        function updateHiddenInput() {
+            // Cập nhật vào input ẩn để gửi về Server
+            $("#hiddenSelectedNewSeatIds").val(selectedIds.join(','));
+
+            // Bật/tắt nút Lưu
+            $("#btnSaveBooking").prop("disabled", selectedIds.length === 0);
+        }
+    </script>
+}

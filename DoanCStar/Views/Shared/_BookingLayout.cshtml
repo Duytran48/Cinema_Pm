@@ -1,0 +1,162 @@
+﻿@{
+    // Kế thừa Header và Footer từ Layout chính
+    Layout = "_Layout";
+}
+
+@* --- PHẦN CSS RIÊNG CHO BOOKING (Cô lập tại đây) --- *@
+<style>
+    /* 1. Wrapper nền tối */
+    .booking-page-wrapper {
+        background-color: #0f1530; /* Màu nền chính */
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    /* 2. Khung chứa sơ đồ ghế */
+    .booking-main-content {
+        background-color: #1a2038; /* Nền khối sơ đồ */
+        border: 1px solid #2a3150;
+    }
+    /* Label của từng hàng ghế */
+    .row-label {
+      
+        padding: 4px 6px;
+        border-radius: 4px;
+        color: #fff !important; /* trắng rõ */
+        font-weight: 600;
+        text-align: center;
+        min-width: 24px; /* giữ kích thước đều */
+        display: inline-block;
+        z-index: 10; /* tránh bị đè */
+    }
+
+    /* 3. Màn hình cong */
+    .screen-area {
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative; /* Quan trọng để định vị chữ */
+    }
+
+        .screen-area .screen-bar {
+            height: 8px;
+            width: 80%; /* Độ rộng màn hình */
+            margin: 0 auto; /* Căn giữa */
+            background: #fff; /* Màu trắng sáng */
+            border-radius: 50%; /* Tạo độ cong */
+            /* Hiệu ứng phát sáng & bóng đổ rõ nét */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 5px 15px rgba(0,0,0,0.5);
+            /* Loại bỏ opacity gây mờ */
+            opacity: 1 !important;
+        }
+
+        /* Chữ MÀN HÌNH bên dưới (Dùng ::after để đảm bảo hiện) */
+        .screen-area::after {
+            content: "MÀN HÌNH";
+            display: block;
+            font-size: 0.85rem;
+            color: #adb5bd; /* Màu xám sáng */
+            margin-top: 0px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+    /* 4. Ô Ghế */
+    .seat-item {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 1px solid;
+        position: relative;
+    }
+
+        .seat-item .seat-num {
+            font-weight: 600;
+        }
+
+        /* Ghế Thường: Viền xanh, nền trong suốt, chữ xanh */
+        .seat-item.standard {
+            border-color: #28a745;
+            color: #28a745;
+            background-color: transparent;
+        }
+
+        /* Ghế VIP: Viền đỏ, nền trong suốt, chữ đỏ */
+        .seat-item.vip {
+            border-color: #dc3545;
+            color: #dc3545;
+            background-color: transparent;
+        }
+
+        /* Ghế Sweetbox: Viền hồng, nền trong suốt */
+        .seat-item.sweetbox {
+            border-color: #d63384;
+            color: #d63384;
+            background-color: transparent;
+            width: 68px; /* Rộng gấp đôi + gap */
+        }
+
+        /* Hover */
+        .seat-item:not(.booked):hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: scale(1.1);
+        }
+
+        /* Đang chọn (Quan trọng: ghi đè tất cả) */
+        .seat-item.selected {
+            background-color: #ffe600 !important;
+            border-color: #ffe600 !important;
+            color: #1a2038 !important;
+            font-weight: bold;
+        }
+
+        /* Đã bán */
+        .seat-item.booked {
+            background-color: #4a4a4a;
+            border-color: #4a4a4a;
+            color: transparent; /* Ẩn số ghế */
+            cursor: not-allowed;
+            position: relative;
+        }
+
+            /* Dấu X cho ghế đã bán */
+            .seat-item.booked::after {
+                content: '×';
+                color: #888;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -55%);
+            }
+
+    /* 5. Sidebar Thông tin vé */
+    .booking-sidebar {
+        background-color: #1a2038;
+        border: 1px solid #ffe600; /* Viền vàng nổi bật */
+    }
+
+        .booking-sidebar .btn-booking-action:disabled {
+            background-color: #555;
+            border-color: #555;
+            color: #999;
+            cursor: not-allowed;
+        }
+</style>
+
+@* --- NỘI DUNG CHÍNH --- *@
+<div class="booking-page-wrapper">
+    @* RenderBody() sẽ chèn nội dung từ SelectSeats.cshtml vào đây *@
+    @RenderBody()
+</div>
+
+@* --- CHUYỂN TIẾP SCRIPT --- *@
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

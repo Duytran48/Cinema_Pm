@@ -1,0 +1,94 @@
+﻿@using DoanCStar.ViewModels
+@model List<MovieScheduleViewModel>
+
+@if (!Model.Any())
+{
+    <div class="text-center py-5">
+        <h3 class="text-white">Không tìm thấy suất chiếu</h3>
+        <p class="text-white-50">Hãy thử chọn ngày, phim hoặc rạp khác</p>
+    </div>
+    return;
+}
+
+@foreach (var item in Model)
+{
+    var movie = item.Movie;
+
+    <div class="mb-5 rounded-4 overflow-hidden shadow-lg border border-warning" style="background:#111;">
+        <div class="row g-0">
+            <!-- TRÁI: Poster + Info -->
+            <div class="col-lg-4">
+                <div class="d-flex flex-column h-100">
+                    <img src="@movie.ImageUrl"
+                         class="w-100"
+                         style="height:500px; object-fit:cover;"
+                         onerror="this.src='https://via.placeholder.com/800x1200/111/ffc107?text=@movie.Title'"
+                         alt="@movie.Title">
+
+                    <div class="p-4 bg-dark text-white">
+                        <h3 class="text-warning fw-bold mb-3">@movie.Title</h3>
+                        <div class="small text-white-50">
+                            <div>Thời lượng: @movie.Duration phút</div>
+                            <div>Thể loại: @movie.Genre</div>
+                            <div>Quốc gia: @movie.Country</div>
+                            <div class="mt-2">
+                                @if (movie.Subtitle)
+                                {
+                                    <span class="badge bg-info me-1">Phụ đề</span>
+                                }
+                                @if (movie.Dubbed)
+                                {
+                                    <span class="badge bg-success">Lồng tiếng</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẢI: Danh sách rạp + suất gộp đúng -->
+            <div class="col-lg-8 p-4" style="background:linear-gradient(135deg,#1a0033,#0f0022);">
+                <h4 class="text-warning fw-bold mb-4">
+                    CÁC RẠP ĐANG CHIẾU (@item.Cinemas.Count rạp)
+                </h4>
+
+                @foreach (var c in item.Cinemas)
+                {
+                    <div class="mb-4 p-3 rounded-3 bg-black bg-opacity-40 border-start border-4 border-warning">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <h5 class="text-white fw-bold mb-1">@c.Cinema.Name</h5>
+                                <p class="text-white-50 small mb-0">
+                                    @c.Cinema.Address<br>
+                                    <strong class="text-warning">@c.Cinema.City</strong>
+                                </p>
+                            </div>
+                            <span class="badge bg-warning text-dark px-3 py-2">STANDARD</span>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            @foreach (var st in c.Showtimes)
+                            {
+                                var time = st.StartTime.ToString("HH:mm");
+                                var isPast = st.StartTime < DateTime.Now;
+                                var isSoon = !isPast && st.StartTime < DateTime.Now.AddHours(1.5);
+
+                                <a asp-controller="Booking"
+                                   asp-action="SelectSeats"
+                                   asp-route-showTimeId="@st.ShowTimeId"
+                                   class="btn btn-sm px-4 py-2 fw-bold
+                                     @(isPast ? "btn-secondary disabled" : isSoon ? "btn-warning text-dark border-3" :"btn-outline-warning border-2")">
+                                    @time
+                                    @if (isSoon)
+                                    {
+                                        <small class="d-block">Sắp chiếu</small>
+                                    }
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}

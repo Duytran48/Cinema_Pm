@@ -1,0 +1,89 @@
+﻿@model List<DoanCStar.ViewModels.ShowTimeViewModel>
+@{
+    ViewData["Title"] = "Danh sách suất chiếu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    // Lấy ID rạp đang lọc (nếu có)
+    int? selectedCinemaId = ViewBag.SelectedCinemaId as int?;
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+
+    @* 1. Nút Thêm: Nếu đang lọc rạp nào, bấm thêm sẽ tự chọn rạp đó *@
+    <a asp-action="Create" asp-route-cinemaId="@selectedCinemaId" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Thêm suất chiếu
+    </a>
+
+    @* 2. Form Lọc theo Rạp *@
+    <form asp-action="Index" method="get" class="d-flex align-items-center">
+        <label class="me-2 fw-bold">Lọc theo Rạp:</label>
+        @* Khi chọn rạp, form sẽ tự submit (onchange) *@
+        <select name="cinemaId" class="form-select w-auto" asp-items="ViewBag.Cinemas" onchange="this.form.submit()">
+            <option value="">-- Tất cả các rạp --</option>
+        </select>
+    </form>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Phim</th>
+                        <th>Rạp / Phòng chiếu</th> @* Gộp hiển thị cho gọn *@
+                        <th>Bắt đầu</th>
+                        <th>Kết thúc</th>
+                        <th class="text-center" style="width:180px;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="fw-bold text-primary">@item.MovieTitle</td>
+                                <td>@item.RoomName</td> @* Đã bao gồm tên Rạp từ Controller *@
+                                <td>@item.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>@item.EndTime.ToString("HH:mm")</td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="Edit" asp-route-id="@item.ShowTimeId" class="btn btn-warning btn-sm" title="Sửa"><i class="bi bi-pencil-square"></i></a>
+                                        <a asp-action="Delete" asp-route-id="@item.ShowTimeId" class="btn btn-danger btn-sm" title="Xóa" onclick="return confirm('Bạn có chắc muốn xóa suất chiếu này?');"><i class="bi bi-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">
+                                <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+                                Không tìm thấy suất chiếu nào.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

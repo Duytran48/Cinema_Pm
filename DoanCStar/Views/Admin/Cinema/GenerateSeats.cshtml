@@ -1,0 +1,101 @@
+﻿@using DoanCStar.ViewModels
+@model AutoGenerateSeatsViewModel
+
+@{
+    ViewData["Title"] = "Tạo sơ đồ ghế tự động";
+    Layout = "_AdminLayout";
+}
+
+<h1 class="h3 mb-2 text-gray-800">Tạo sơ đồ ghế tự động</h1>
+<p class="mb-2">
+    Phòng: <strong class="text-primary">@Model.RoomName</strong> |
+    Rạp: <strong class="text-primary">@Model.CinemaName</strong>
+</p>
+<p class="mb-4">Sức chứa thiết kế: <strong class="text-danger fs-5">@Model.RoomCapacity</strong></p>
+
+@if (Model.RoomCapacity % 10 != 0)
+{
+    <div class="alert alert-danger">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <strong>Lưu ý:</strong> Sức chứa phòng này (@Model.RoomCapacity) sẽ gây ra tình trạng lẻ ghế.
+    </div>
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 bg-primary text-white">
+        <h6 class="m-0 font-weight-bold">Cấu hình tự động</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="GenerateSeats" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <input type="hidden" asp-for="RoomId" />
+
+            <div class="mb-4">
+                <label asp-for="RowCount" class="form-label fw-bold">Chọn số lượng hàng ghế mong muốn:</label>
+                <div class="d-flex gap-3">
+                    @* Radio buttons cho các lựa chọn 4, 6, 8, 10 *@
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="RowCount" value="4" id="row4">
+                        <label class="form-check-label" for="row4">4 Hàng</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="RowCount" value="6" id="row6">
+                        <label class="form-check-label" for="row6">6 Hàng</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="RowCount" value="8" id="row8">
+                        <label class="form-check-label" for="row8">8 Hàng</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="RowCount" value="10" id="row10">
+                        <label class="form-check-label" for="row10">10 Hàng</label>
+                    </div>
+                </div>
+                <span asp-validation-for="RowCount" class="text-danger"></span>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <label asp-for="PriceStandard" class="form-label fw-bold">Giá ghế Thường</label>
+                    <input asp-for="PriceStandard" class="form-control" type="number" step="any" />
+                    <span asp-validation-for="PriceStandard" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="PriceVIP" class="form-label fw-bold">Giá ghế VIP</label>
+                    <input asp-for="PriceVIP" class="form-control" type="number" step="any" />
+                    <span asp-validation-for="PriceVIP" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="PriceSweetbox" class="form-label fw-bold">Giá ghế Sweetbox</label>
+                    <input asp-for="PriceSweetbox" class="form-control" type="number" step="any" />
+                    <span asp-validation-for="PriceSweetbox" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="alert alert-info bg-light border-0">
+                <strong><i class="bi bi-info-circle-fill"></i> Nguyên tắc tạo ghế:</strong>
+                <ul class="mb-0 mt-2 small text-muted">
+                    <li>Hàng cuối cùng sẽ là <strong>Sweetbox (Ghế đôi)</strong>.</li>
+                    <li>Các hàng ở giữa sẽ là <strong>VIP</strong>.</li>
+                    <li>Hệ thống sẽ tự động tính toán số ghế mỗi hàng để khớp chính xác với sức chứa <strong>@Model.RoomCapacity</strong>.</li>
+                    <li>Mỗi ghế Sweetbox tính là 2 đơn vị sức chứa.</li>
+                </ul>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success" @(Model.RoomCapacity % 10 != 0 ? "disabled" : "")>
+                    <i class="bi bi-magic me-2"></i> Tính toán & Tạo ghế
+                </button>
+                <a asp-action="SeatManagement" asp-route-roomId="@Model.RoomId" class="btn btn-secondary ms-2">
+                    <i class="bi bi-x-circle me-2"></i> Hủy
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

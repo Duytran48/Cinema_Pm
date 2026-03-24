@@ -1,0 +1,82 @@
+﻿@model IEnumerable<DoanCStar.Models.Promotion>
+
+@{
+    ViewData["Title"] = "Quản lý Khuyến mãi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Quản lý Khuyến mãi</h1> <ol class="breadcrumb mb-4">
+    </ol>
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="fas fa-tags me-1"></i> Danh sách chương trình</h5>
+            <a asp-action="Create" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Thêm mới</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle">
+                    <thead style="background: linear-gradient(to right, #8e2de2, #4a00e0, #00c6ff) !important;">
+                        <tr>
+                            <th class="text-white" style="background: transparent !important;">Mã Code</th>
+                            <th class="text-white" style="background: transparent !important;">Tên khuyến mãi</th>
+                            <th class="text-center text-white" style="background: transparent !important;">Giảm giá</th>
+                            <th class="text-white" style="background: transparent !important;">Thời gian áp dụng</th>
+                            <th class="text-center text-white" style="background: transparent !important;">Trạng thái</th>
+                            <th class="text-center text-white" style="background: transparent !important; width: 150px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="fw-bold text-warning text-uppercase">@item.Code</td>
+                                <td class="fw-bold text-primary">@Html.DisplayFor(modelItem => item.Name)</td>
+                                <td class="text-center text-danger fw-bold">@item.DiscountPercent.ToString("N0")%</td>
+                                <td>
+                                    <small>
+                                        Bắt đầu: @item.StartDate.ToString("dd/MM/yyyy")<br />
+                                        Kết thúc: @item.EndDate.ToString("dd/MM/yyyy")
+                                    </small>
+                                </td>
+                                <td class="text-center">
+                                    @if (item.Active)
+                                    {
+                                        if (DateTime.Now >= item.StartDate && DateTime.Now <= item.EndDate)
+                                        {
+                                            <span class="badge bg-success">Đang diễn ra</span>
+                                        }
+                                        else if (DateTime.Now < item.StartDate)
+                                        {
+                                            <span class="badge bg-warning text-dark">Sắp diễn ra</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">Đã kết thúc</span>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Chưa kích hoạt</span>
+                                    }
+                                </td>
+                                
+                                <td class="text-center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="Edit" asp-route-id="@item.PromotionId" class="btn btn-outline-warning btn-sm" title="Sửa">
+                                            <i class="fas fa-edit"></i> Sửa
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.PromotionId" class="btn btn-outline-danger btn-sm" title="Xóa">
+                                            <i class="fas fa-trash-alt"></i> Xóa
+                                        </a>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

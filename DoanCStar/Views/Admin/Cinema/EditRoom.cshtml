@@ -1,0 +1,50 @@
+﻿@model DoanCStar.Models.Room
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Phòng";
+    Layout = "_AdminLayout";
+    int cinemaId = Model.CinemaId;
+    string cinemaName = Model.Cinema?.Name ?? "Không rõ"; 
+}
+
+<h1 class="h3 mb-2 text-gray-800">Chỉnh sửa Phòng: @Model.Name</h1>
+<p class="mb-4">Thuộc Rạp: <strong class="text-primary">@cinemaName</strong></p>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <form asp-action="EditRoom">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <input type="hidden" asp-for="RoomId" />
+            <input type="hidden" asp-for="CinemaId" /> 
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Tên Phòng *</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Capacity" class="form-label">Sức chứa *</label>
+                <input asp-for="Capacity" type="number" class="form-control" />
+                <span asp-validation-for="Capacity" class="text-danger"></span>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle-fill me-2"></i> Lưu thay đổi
+                </button>
+                <a asp-action="RoomManagement" asp-route-cinemaId="@cinemaId" class="btn btn-secondary ms-2">
+                    <i class="bi bi-x-circle me-2"></i> Hủy
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

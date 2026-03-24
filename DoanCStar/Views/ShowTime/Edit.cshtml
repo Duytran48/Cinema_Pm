@@ -1,0 +1,83 @@
+﻿@model DoanCStar.ViewModels.ShowTimeViewModel
+@{
+    ViewData["Title"] = "Sửa suất chiếu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>@ViewData["Title"]</h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="ShowTimeId" />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="MovieId" class="form-label"></label>
+                <select asp-for="MovieId" asp-items="ViewBag.Movies" class="form-select"></select>
+                <span asp-validation-for="MovieId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CinemaId" class="form-label"></label>
+                <select asp-for="CinemaId" asp-items="ViewBag.Cinemas" class="form-select" id="CinemaDropdown">
+                    <option value="">-- Chọn Rạp --</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="RoomId" class="form-label"></label>
+                <select asp-for="RoomId" asp-items="ViewBag.Rooms" class="form-select" id="RoomDropdown">
+                </select>
+                <span asp-validation-for="RoomId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="StartTime" class="form-label"></label>
+                <input asp-for="StartTime" type="datetime-local" class="form-control" />
+                <span asp-validation-for="StartTime" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Thời gian kết thúc (tự động)</label>
+                <input type="text" class="form-control" value="@Model.EndTime.ToString("dd/MM/yyyy HH:mm")" disabled />
+            </div>
+
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-warning">Cập nhật</button>
+                <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    @* ===== SCRIPT AJAX CẬP NHẬT PHÒNG (GIỐNG CREATE) ===== *@
+    <script>
+        $(document).ready(function () {
+            $('#CinemaDropdown').change(function () {
+                var cinemaId = $(this).val();
+                var roomDropdown = $('#RoomDropdown');
+
+                // Xóa các option cũ
+                roomDropdown.empty();
+                roomDropdown.append('<option value="">-- Chọn Phòng --</option>');
+
+                if (cinemaId) {
+                    roomDropdown.prop('disabled', false);
+                    $.getJSON('/ShowTime/GetRoomsByCinema', { cinemaId: cinemaId }, function (data) {
+                        $.each(data, function (index, room) {
+                            roomDropdown.append('<option value="' + room.roomId + '">' + room.name + '</option>');
+                        });
+                    });
+                } else {
+                    roomDropdown.prop('disabled', true);
+                    roomDropdown.append('<option value="">-- Vui lòng chọn Rạp trước --</option>');
+                }
+            });
+        });
+    </script>
+}

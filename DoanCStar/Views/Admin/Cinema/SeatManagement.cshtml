@@ -1,0 +1,204 @@
+﻿@using DoanCStar.ViewModels
+@model List<SeatGroupViewModel>
+
+@{
+    ViewData["Title"] = $"Quản lý Ghế - Phòng {ViewBag.RoomName}";
+    Layout = "_AdminLayout";
+    int roomId = ViewBag.RoomId;
+    int cinemaId = ViewBag.CinemaId;
+    string roomName = ViewBag.RoomName;
+    string cinemaName = ViewBag.CinemaName;
+    int roomCapacity = ViewBag.RoomCapacity ?? 0;
+    int currentCapacityUsed = ViewBag.CurrentCapacityUsed ?? 0;
+    int fillPercentage = (roomCapacity > 0) ? (int)Math.Round((double)currentCapacityUsed * 100 / roomCapacity) : 0;
+    string progressColorClass = fillPercentage < 50 ? "bg-success" : (fillPercentage < 90 ? "bg-warning" : "bg-danger");
+
+    // Kiểm tra xem đã đầy chưa
+    bool isFull = currentCapacityUsed >= roomCapacity;
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["InfoMessage"] != null)
+{
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        @TempData["InfoMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<h1 class="h3 mb-2 text-gray-800">Quản lý Ghế ngồi</h1>
+<p class="mb-2">
+    Phòng: <strong class="text-primary">@roomName</strong> |
+    Rạp: <strong class="text-primary">@cinemaName</strong>
+</p>
+
+@* Hiển thị thông tin sức chứa *@
+<div class="mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-1">
+        <span class="text-muted">Sức chứa đã sử dụng / Tối đa (đơn vị):</span>
+        <span class="font-weight-bold">@currentCapacityUsed / @roomCapacity</span>
+    </div>
+    <div class="progress" style="height: 10px;">
+        <div class="progress-bar @progressColorClass" role="progressbar" style="width: @fillPercentage%;"
+             aria-valuenow="@currentCapacityUsed" aria-valuemin="0" aria-valuemax="@roomCapacity"></div>
+    </div>
+    @if (isFull)
+    {
+        <small class="text-danger mt-1 d-block fw-bold">Phòng đã đạt hoặc vượt quá sức chứa tối đa. Không thể thêm ghế mới.</small>
+    }
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        @* 1. CHỈ HIỂN THỊ NÚT THÊM KHI CHƯA ĐẦY *@
+        @if (!isFull)
+        {
+            <a asp-action="GenerateSeats" asp-route-roomId="@roomId" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-2"></i> Thêm Hàng Ghế Mới
+            </a>
+        }
+        else
+        {
+            <button class="btn btn-secondary" disabled title="Phòng đã đầy">
+                <i class="bi bi-lock-fill me-2"></i> Đã đầy
+            </button>
+        }
+
+        <a asp-action="RoomManagement" asp-route-cinemaId="@cinemaId" class="btn btn-outline-secondary ms-2">
+            <i class="bi bi-arrow-left-circle me-2"></i> Quay lại
+        </a>
+    </div>
+
+    @* Nút xóa nhiều (sẽ được kích hoạt bằng JS) *@
+    <button type="button" id="btnDeleteSelected" class="btn btn-danger" style="display: none;" onclick="submitDeleteForm()">
+        <i class="bi bi-trash-fill me-2"></i> Xóa các hàng đã chọn
+    </button>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Danh sách Ghế hiện tại</h6>
+    </div>
+    <div class="card-body">
+
+        @* 2. FORM BAO QUANH BẢNG ĐỂ XÓA NHIỀU *@
+        <form id="deleteForm" asp-action="DeleteSelectedSeatRows" method="post">
+            <input type="hidden" name="roomId" value="@roomId" />
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            @* Checkbox chọn tất cả *@
+                            <th style="width: 40px;" class="text-center">
+                                <input type="checkbox" id="selectAll" class="form-check-input" style="cursor: pointer;">
+                            </th>
+                            <th>Hàng</th>
+                            <th>Dãy Ghế</th>
+                            <th>Loại Ghế</th>
+                            <th>Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var group in Model)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    @* Checkbox cho từng hàng *@
+                                    <input type="checkbox" name="selectedRows" value="@group.Row" class="form-check-input row-checkbox" style="cursor: pointer;">
+                                </td>
+                                <td>@group.Row</td>
+                                <td>
+                                    @if (group.Count == (group.MaxNumber - group.MinNumber + 1))
+                                    {
+                                        <span>@group.MinNumber - @group.MaxNumber</span>
+                                    }
+                                    else
+                                    {
+
+                                        <span>(Ghế rải rác)</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (group.SeatType == "VIP")
+                                    {
+                                        <span class="badge bg-warning text-dark">@group.SeatType</span>
+                                    }
+                                    else if (group.SeatType == "Sweetbox")
+                                    {
+
+                                        <span class="badge bg-danger">@group.SeatType</span>
+                                    }
+                                    else
+                                    {
+
+                                        <span class="badge bg-secondary">@group.SeatType</span>
+                                    }
+                                </td>
+                                <td>@group.Count ghế</td>
+                                <td>               
+                                </td>
+                            </tr>
+                        }
+                        @if (!Model.Any())
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center">Phòng này chưa có ghế nào. Hãy thêm hàng ghế.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </form>
+
+        
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Xử lý Checkbox "Chọn tất cả"
+        document.getElementById('selectAll').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.row-checkbox');
+            checkboxes.forEach(cb => cb.checked = this.checked);
+            toggleDeleteButton();
+        });
+
+        // Xử lý hiển thị nút xóa khi có checkbox được chọn
+        const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+        rowCheckboxes.forEach(cb => {
+            cb.addEventListener('change', toggleDeleteButton);
+        });
+
+        function toggleDeleteButton() {
+            const anyChecked = document.querySelectorAll('.row-checkbox:checked').length > 0;
+            const btn = document.getElementById('btnDeleteSelected');
+            if (anyChecked) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        }
+
+        // Xử lý submit form xóa nhiều
+        function submitDeleteForm() {
+            if (confirm('Bạn có chắc chắn muốn xóa các hàng ghế đã chọn không?')) {
+                document.getElementById('deleteForm').submit();
+            }
+        }
+    </script>
+}

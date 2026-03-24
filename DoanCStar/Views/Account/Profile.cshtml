@@ -1,0 +1,229 @@
+﻿@model DoanCStar.Models.User
+
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+    Layout = "_Layout"; // Sử dụng layout chính
+}
+
+@* Div bao bọc để CSS áp dụng đúng *@
+<div class="profile-page-wrapper">
+
+    <div class="container profile-container">
+
+        @* === SIDEBAR === *@
+        <nav class="profile-sidebar">
+            <div class="user-info">
+                <i class="bi bi-person-circle"></i>
+                <h6>@Model.FullName</h6>
+                <small>@Model.Email</small>
+                <div><a href="#" class="btn btn-link btn-sm p-0">Thay đổi ảnh đại diện</a></div>
+            </div>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" asp-action="Profile" asp-controller="Account">
+                        <i class="bi bi-person-circle"></i> Thông tin khách hàng
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Account" asp-action="Membership">
+                        @* Link tới trang thành viên *@
+                        <i class="bi bi-star-fill"></i> Thành viên Cinestar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Booking" asp-action="History" class="nav-link">
+                        <i class="bi bi-clock-history"></i> Lịch sử giao dịch
+                    </a>
+                </li>
+                <li class="nav-item mt-3">
+                    <a class="nav-link" asp-action="Logout" asp-controller="Account">
+                        <i class="bi bi-box-arrow-left"></i> Đăng xuất
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        @* === NỘI DUNG CHÍNH === *@
+        <div class="profile-content">
+            <h3 class="mb-4 fw-bold text-white">THÔNG TIN KHÁCH HÀNG</h3>
+
+            @* === FORM SỬA THÔNG TIN === *@
+            <div class="profile-card">
+                <h5>Thông tin cá nhân</h5>
+                <div id="profileUpdateSuccess" class="alert alert-success alert-dismissible fade show" role="alert"
+                    style="display: none;">
+                    Cập nhật thông tin thành công!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div id="profileUpdateError" class="alert alert-danger" role="alert" style="display: none;"></div>
+                <form id="profileUpdateForm" asp-action="UpdateProfile" asp-controller="Account" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="UserId" />
+                    <input type="hidden" asp-for="PasswordHash" />
+                    <input type="hidden" asp-for="Role" />
+                    <input type="hidden" asp-for="CreatedAt" />
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="FullName" class="form-label">Họ và tên</label>
+                            <input asp-for="FullName" class="form-control" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Phone" class="form-label">Số điện thoại</label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label">Email</label>
+                            <input asp-for="Email" class="form-control" readonly />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-4">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                            style="display: none;"></span>
+                        <span class="button-text">LƯU THÔNG TIN</span>
+                    </button>
+                </form>
+            </div>
+
+            @* === FORM ĐỔI MẬT KHẨU === *@
+            <div class="profile-card">
+                <h5>Đổi mật khẩu</h5>
+                <div id="passwordChangeSuccess" class="alert alert-success alert-dismissible fade show" role="alert"
+                    style="display: none;">
+                    Đổi mật khẩu thành công!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div id="passwordChangeError" class="alert alert-danger" role="alert" style="display: none;"></div>
+                <form id="passwordChangeForm" asp-action="ChangePassword" asp-controller="Account" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Mật khẩu cũ *</label>
+                        <input type="password" id="currentPassword" name="CurrentPassword" class="form-control"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">Mật khẩu mới *</label>
+                        <input type="password" id="newPassword" name="NewPassword" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Xác thực mật khẩu *</label>
+                        <input type="password" id="confirmPassword" name="ConfirmPassword" class="form-control"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-3">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                            style="display: none;"></span>
+                        <span class="button-text">ĐỔI MẬT KHẨU</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div> @* Kết thúc div.profile-page-wrapper *@
+
+
+@* === SCRIPT AJAX === *@
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // --- Xử lý Form Cập nhật Thông tin ---
+            const profileForm = document.getElementById("profileUpdateForm");
+            const profileSuccess = document.getElementById("profileUpdateSuccess");
+            const profileError = document.getElementById("profileUpdateError");
+            const profileButton = profileForm.querySelector('button[type="submit"]');
+
+            if (profileForm) {
+                profileForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    profileSuccess.style.display = 'none';
+                    profileError.style.display = 'none';
+
+                    const formData = new FormData(profileForm);
+                    profileButton.disabled = true;
+                    profileButton.classList.add("btn-loading");
+
+                    fetch(profileForm.action, {
+                        method: "POST",
+                        body: formData
+                    })
+                        .then(response => response.json().then(data => ({ ok: response.ok, data: data })))
+                        .then(result => {
+                            if (result.ok) {
+                                profileSuccess.style.display = 'block';
+                                // Tự ẩn alert
+                                setTimeout(() => { if (profileSuccess && bootstrap.Alert.getInstance(profileSuccess)) { bootstrap.Alert.getInstance(profileSuccess).close(); } }, 3000);
+                                // Cập nhật lại tên trên header nếu có thay đổi
+                                const headerUserName = document.querySelector('.user-trigger');
+                                if (headerUserName && formData.get('FullName')) {
+                                    headerUserName.innerHTML = `<i class="bi bi-person-circle me-1"></i> Xin chào, ${formData.get('FullName')}`;
+                                }
+
+                            } else {
+                                profileError.textContent = result.data.message || "Có lỗi xảy ra.";
+                                profileError.style.display = 'block';
+                            }
+                        })
+                        .catch(err => {
+                            profileError.textContent = "Lỗi kết nối. Vui lòng thử lại.";
+                            profileError.style.display = 'block';
+                        })
+                        .finally(() => {
+                            profileButton.disabled = false;
+                            profileButton.classList.remove("btn-loading");
+                        });
+                });
+            }
+
+            // --- Xử lý Form Đổi Mật khẩu ---
+            const passwordForm = document.getElementById("passwordChangeForm");
+            const passwordSuccess = document.getElementById("passwordChangeSuccess");
+            const passwordError = document.getElementById("passwordChangeError");
+            const passwordButton = passwordForm.querySelector('button[type="submit"]');
+
+            if (passwordForm) {
+                passwordForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    passwordSuccess.style.display = 'none';
+                    passwordError.style.display = 'none';
+
+                    const formData = new FormData(passwordForm);
+                    passwordButton.disabled = true;
+                    passwordButton.classList.add("btn-loading");
+
+                    fetch(passwordForm.action, {
+                        method: "POST",
+                        body: new URLSearchParams(formData)
+                    })
+                        .then(response => response.json().then(data => ({ ok: response.ok, data: data })))
+                        .then(result => {
+                            if (result.ok) {
+                                passwordSuccess.style.display = 'block';
+                                passwordForm.reset();
+                                // Tự ẩn alert
+                                setTimeout(() => { if (passwordSuccess && bootstrap.Alert.getInstance(passwordSuccess)) { bootstrap.Alert.getInstance(passwordSuccess).close(); } }, 3000);
+                            } else {
+                                passwordError.textContent = result.data.message || "Có lỗi xảy ra.";
+                                passwordError.style.display = 'block';
+                            }
+                        })
+                        .catch(err => {
+                            passwordError.textContent = "Lỗi kết nối. Vui lòng thử lại.";
+                            passwordError.style.display = 'block';
+                        })
+                        .finally(() => {
+                            passwordButton.disabled = false;
+                            passwordButton.classList.remove("btn-loading");
+                        });
+                });
+            }
+        });
+    </script>
+}

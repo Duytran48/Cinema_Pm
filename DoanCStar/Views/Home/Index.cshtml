@@ -1,0 +1,107 @@
+﻿@{
+    /* File: Views/Home/Index.cshtml */
+    ViewData["Title"] = "CGStar";
+}
+
+@* Banner *@
+<vc:banner></vc:banner>
+
+@* ĐẶT VÉ NHANH *@
+<vc:quick-booking></vc:quick-booking>
+
+@* PHIM ĐANG CHIẾU*@
+<vc:now-showing></vc:now-showing>
+
+@* PHIM SẮP CHIẾU *@
+<vc:coming-soon></vc:coming-soon>
+
+@* Khuyến mãi *@
+<vc:promotion></vc:promotion>
+@* Dịch vụ giải trí *@
+<vc:other-services></vc:other-services>
+@section Scripts {
+    <script>
+        // Script cho banner
+        const swiper = new Swiper('.banner-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            speed: 800
+        });
+
+        // Script cho phim đang chiếu
+        const movieSwiper = new Swiper('.movie-swiper', {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 20,
+            loop: false,
+            pagination: {
+                el: '.movie-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.movie-next',
+                prevEl: '.movie-prev',
+            },
+
+            breakpoints: {
+
+                1200: { slidesPerView: 4, slidesPerGroup: 4 },
+                992: { slidesPerView: 4, slidesPerGroup: 4 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
+                480: { slidesPerView: 1, slidesPerGroup: 1 },
+            },
+        });
+                // Script cho phim sắp chiếu
+        const comingSoonSwiper = new Swiper('.coming-soon-swiper', {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 20,
+            loop: false,
+            pagination: {
+                el: '.coming-soon-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.coming-soon-next',
+                prevEl: '.coming-soon-prev',
+            },
+            breakpoints: {
+                1200: { slidesPerView: 4, slidesPerGroup: 4 },
+                992: { slidesPerView: 4, slidesPerGroup: 4 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
+                480: { slidesPerView: 1, slidesPerGroup: 1 },
+            },
+        });
+    </script>
+    @* script promotion *@
+    <script>
+        var promotionSwiper = new Swiper('.promotion-swiper', {
+            slidesPerView: 1, // mỗi lần chỉ hiển thị 1 trang (3 ảnh)
+            loop: true,
+            navigation: {
+                nextEl: '.promotion-next',
+                prevEl: '.promotion-prev',
+            },
+            pagination: {
+                el: '.promotion-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+}

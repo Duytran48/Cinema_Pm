@@ -1,0 +1,88 @@
+﻿@model List<DoanCStar.Models.Movie>
+
+@if (!Model?.Any() ?? true)
+{
+    <div class="text-center py-5">
+        <p class="text-white-50 fs-4">Hiện chưa có phim nào @(ViewBag.Status == "Sắp chiếu" ? "sắp chiếu" : "đang chiếu") tại rạp này.</p>
+    </div>
+}
+else
+{
+    <div class="swiper movie-swiper schedule-swiper">
+        <div class="swiper-wrapper">
+            @foreach (var movie in Model)
+            {
+                <div class="swiper-slide">
+                    <a asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.MovieId" class="movie-poster-box d-block">
+                        <img src="@movie.ImageUrl" class="img-fluid rounded-3 shadow-lg" alt="@movie.Title" style="height: 430px; object-fit: cover;" />
+                        <div class="movie-info-overlay">
+                            <ul class="movie-info-list">
+                                <li><i class="bi bi-tag-fill"></i> @movie.Genre</li>
+                                <li><i class="bi bi-clock-fill"></i> @movie.Duration phút</li>
+                                <li><i class="bi bi-globe"></i> @movie.Country</li>
+                                <li><i class="bi bi-chat-left-dots-fill"></i> @movie.Language</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <div class="text-center mt-3">
+                        <h5 class="text-white fw-bold mb-3">@movie.Title</h5>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="btn btn-outline-warning btn-sm js-play-trailer"
+                                    data-trailer-url="@movie.TrailerUrl"
+                                    data-movie-title="@movie.Title">
+                                <i class="bi bi-play-circle"></i> Xem trailer
+                            </button>
+                            <a asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.MovieId"
+                               class="btn btn-warning btn-sm fw-bold">
+                                <i class="bi bi-ticket-perforated"></i> Đặt vé
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+<style>
+    /* BẮT BUỘC 4 PHIM MỖI HÀNG + ẨN NÚT THỪA TRONG TRANG SCHEDULE */
+    .schedule-swiper .swiper-slide {
+        width: 25% !important;
+        height: auto !important;
+    }
+
+    .schedule-swiper img {
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
+
+        .schedule-swiper img:hover {
+            transform: scale(1.05);
+        }
+    /* ẨN HẾT NÚT KHÔNG CẦN */
+    .schedule-swiper .swiper-button-prev,
+    .schedule-swiper .swiper-button-next,
+    .schedule-swiper .swiper-pagination {
+        display: none !important;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        // Khởi tạo Swiper chỉ cho trang Schedule
+        document.addEventListener('DOMContentLoaded', () => {
+            new Swiper('.schedule-swiper', {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                loop: false,
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
+                    1200: { slidesPerView: 4 }
+                }
+            });
+        });
+    </script>
+}

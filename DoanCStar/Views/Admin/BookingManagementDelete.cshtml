@@ -1,0 +1,33 @@
+﻿@model DoanCStar.Models.Booking
+
+@{
+    ViewData["Title"] = "Xóa Booking";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Xóa Booking</h1>
+
+<h4>Bạn có chắc muốn xóa booking này không?</h4>
+<div class="card mb-3">
+    <div class="card-body">
+        <p><strong>Mã vé:</strong> @Model.BookingCode</p>
+        <p><strong>Người đặt:</strong> @Model.User.FullName</p>
+        <p><strong>Phim:</strong> @Model.ShowTime.Movie.Title</p>
+        <p><strong>Rạp / Phòng:</strong> @Model.ShowTime.Room.Cinema.Name / @Model.ShowTime.Room.Name</p>
+        <p><strong>Suất chiếu:</strong> @Model.ShowTime.StartTime.ToString("dd/MM/yyyy HH:mm")</p>
+        <p>
+            <strong>Ghế đã đặt:</strong>
+            @foreach (var bs in Model.BookingSeats)
+            {
+                <span class="badge bg-primary me-1">@($"{bs.Seat.Row}{bs.Seat.Number}")</span>
+            }
+        </p>
+        <p><strong>Tổng tiền:</strong> @Model.TotalPrice.ToString("C")</p>
+    </div>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="BookingId" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="BookingManagement" class="btn btn-secondary">Hủy</a>
+</form>

@@ -1,0 +1,56 @@
+@model DoanCStar.ViewModels.PaymentViewModel
+
+<div class="card bg-dark text-white border-secondary shadow-sm sticky-top" style="top: 20px; z-index: 1020;">
+
+    <div class="d-flex p-3 border-bottom border-secondary bg-dark rounded-top">
+        <img src="@Model.ImageUrl" alt="Poster" class="rounded" style="width: 80px; height: 120px; object-fit: cover;">
+        <div class="ms-3">
+            <h5 class="text-white fw-bold mb-1">@Model.MovieTitle</h5>
+            <span class="badge bg-warning text-dark">2D Phụ đề</span>
+        </div>
+    </div>
+
+    <div class="p-3 bg-dark rounded-bottom">
+        <div class="d-flex justify-content-between mb-2 text-white-50">
+            <span>Rạp:</span> <span class="text-white text-end">@Model.CinemaName</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 text-white-50">
+            <span>Phòng:</span> <span class="text-white text-end">@Model.RoomName</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 text-white-50">
+            <span>Suất chiếu:</span> <span class="text-white text-end">@Model.StartTime</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2 text-white-50">
+            <span>Ghế:</span> <span class="text-white text-end text-break" style="max-width: 150px;">@Model.SelectedSeatNames</span>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="d-flex justify-content-between mb-1 text-white small">
+            <span>Vé phim:</span> <span>@Model.SeatTotalPrice.ToString("N0") đ</span>
+        </div>
+
+        @if (Model.ConcessionTotalPrice > 0)
+        {
+            <div class="d-flex justify-content-between mb-1 text-white small">
+                <span>Bắp nước:</span> <span>@Model.ConcessionTotalPrice.ToString("N0") đ</span>
+            </div>
+        }
+
+        <div id="discountRow" class="d-flex justify-content-between mb-1 text-success fw-bold" style="display: none;">
+            <span>Giảm giá:</span> <span id="discountAmountDisplay">-0 đ</span>
+        </div>
+        <hr class="border-secondary my-3" />
+
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="text-white fs-5">Tổng cộng:</span>
+            <span id="finalTotalDisplay" class="text-warning fw-bold fs-4">
+                @Model.TotalPrice.ToString("N0") đ
+            </span>
+        </div>
+
+        <button type="submit" form="paymentForm" class="btn btn-warning w-100 mt-4 fw-bold fs-5 py-3">
+            THANH TOÁN
+        </button>
+    </div>
+</div>

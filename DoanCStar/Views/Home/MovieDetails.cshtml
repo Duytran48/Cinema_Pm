@@ -1,0 +1,153 @@
+﻿@model DoanCStar.ViewModels.MovieDetailsViewModel
+
+@{
+    ViewData["Title"] = Model.Movie.Title;
+    Layout = "_Layout";
+
+    // Logic tạo 3 tab ngày
+    var culture = new System.Globalization.CultureInfo("vi-VN");
+    var today = DateTime.Today;
+    var dates = new List<(DateTime Date, string Label, string Id)>
+    {
+        (today, "Hôm nay", "day1"),
+        (today.AddDays(1), culture.TextInfo.ToTitleCase(today.AddDays(1).ToString("dddd", culture)), "day2"),
+        (today.AddDays(2), culture.TextInfo.ToTitleCase(today.AddDays(2).ToString("dddd", culture)), "day3")
+    };
+}
+
+<div class="container movie-details-page">
+    <div class="row">
+        <div class="col-lg-4 col-md-5">
+            <img src="@Model.Movie.ImageUrl" class="img-fluid rounded movie-details-poster" alt="@Model.Movie.Title">
+        </div>
+
+        <div class="col-lg-8 col-md-7">
+            <h3 class="fw-bold text-white mb-3">@Model.Movie.Title</h3>
+
+            <ul class="movie-meta-list">
+                <li><i class="bi bi-tag-fill"></i> <span>@Model.Movie.Genre</span></li>
+                <li><i class="bi bi-clock-fill"></i> <span>@Model.Movie.Duration phút</span></li>
+                <li><i class="bi bi-globe"></i> <span>@Model.Movie.Country</span></li>
+                <li><i class="bi bi-chat-left-dots-fill"></i> <span>@(Model.Movie.Subtitle ? "Phụ đề" : "Lồng tiếng") - @Model.Movie.Language</span></li>
+
+                @* Hiển thị Rating *@
+                @if (Model.Movie.Status == "T18")
+                {
+                    <li class="meta-rating-t16"><i class="bi bi-exclamation-triangle-fill text-danger"></i> <span class="text-danger">Phim dành cho khán giả từ 18 tuổi trở lên</span></li>
+                }
+                else if (Model.Movie.Status == "T16")
+                {
+                    <li class="meta-rating-t16"><i class="bi bi-exclamation-circle-fill text-warning"></i> <span class="text-warning">Phim dành cho khán giả từ 16 tuổi trở lên</span></li>
+                }
+            </ul>
+
+            <div class="movie-credits mt-4">
+                <h6 class="text-white fw-bold">MÔ TẢ</h6>
+                <p><strong>Đạo diễn:</strong> @Model.Movie.Director</p>
+                @* <p><strong>Diễn viên:</strong> ...</p> *@
+            </div>
+
+            <div class="movie-synopsis mt-4">
+                <h6 class="text-white fw-bold">NỘI DUNG PHIM</h6>
+                <p>@Model.Movie.Description</p>
+            </div>
+
+            <div class="movie-actions mt-4 d-flex gap-3">
+                <a href="javascript:void(0);"
+                   class="btn btn-lg btn-outline-warning js-play-trailer"
+                   data-trailer-url="@Model.Movie.TrailerUrl"
+                   data-movie-title="@Model.Movie.Title">
+                    <i class="bi bi-play-circle-fill me-2"></i> Xem Trailer
+                </a>
+
+                <a href="#showtimesSection" id="showShowtimesBtn" class="btn btn-lg btn-animate btn-ticket">
+                    <i class="bi bi-ticket-perforated me-2"></i> ĐẶT VÉ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="movie-showtimes-section container mt-5" id="showtimesSection" style="display: none;">
+    <hr class="footer-divider">
+    <h3 class="text-center text-white fw-bold text-uppercase mb-4">Lịch chiếu</h3>
+
+    <ul class="nav nav-pills nav-fill dynamic-date-boxes mb-4" role="tablist">
+        @foreach (var item in dates)
+        {
+            <li class="nav-item" role="presentation">
+                <button class="nav-link @(item.Date == today ? "active" : "")"
+                        id="@item.Id-tab" data-bs-toggle="tab" data-bs-target="#@item.Id-pane"
+                        type="button" role="tab" aria-selected="@(item.Date == today)">
+                    <span>@item.Date.ToString("dd/MM")</span>
+                    <small>@item.Label</small>
+                </button>
+            </li>
+        }
+    </ul>
+
+    <div class="tab-content">
+        @foreach (var item in dates)
+        {
+            // Lọc suất chiếu theo ngày
+            var showsOnDate = Model.ShowTimes.Where(s => s.StartTime.Date == item.Date).ToList();
+            var cinemas = showsOnDate.GroupBy(s => s.Room.Cinema).ToList();
+
+            <div class="tab-pane fade @(item.Date == today ? "show active" : "")" id="@item.Id-pane" role="tabpanel">
+                @if (cinemas.Any())
+                {
+                    <div class="accordion cinema-accordion">
+                        @foreach (var cinemaGroup in cinemas)
+                        {
+                            var cinema = cinemaGroup.Key;
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-@item.Id-@cinema.CinemaId">
+                                        @cinema.Name
+                                    </button>
+                                </h2>
+                                <div id="c-@item.Id-@cinema.CinemaId" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p class="cinema-address">@cinema.Address</p>
+                                        <div class="showtime-list">
+                                            @foreach (var show in cinemaGroup.OrderBy(s => s.StartTime))
+                                            {
+                                                // Link tới trang chọn ghế
+                                                <a asp-controller="Booking" asp-action="SelectSeats" asp-route-showTimeId="@show.ShowTimeId" class="showtime-btn">
+                                                    @show.StartTime.ToString("HH:mm")
+                                                </a>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="no-showtimes-box mt-3">
+                        <i class="bi bi-calendar-x"></i> <span>Chưa có lịch chiếu vào ngày này.</span>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Xử lý nút Đặt vé cuộn xuống lịch
+            const btn = document.getElementById('showShowtimesBtn');
+            const section = document.getElementById('showtimesSection');
+            if(btn && section) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    section.style.display = 'block';
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+}

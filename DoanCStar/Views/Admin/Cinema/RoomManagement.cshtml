@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DoanCStar.Models.Room>
+
+@{
+    ViewData["Title"] = $"Quản lý Phòng - {ViewBag.CinemaName}"; // Lấy tên rạp từ ViewBag
+    Layout = "_AdminLayout";
+    int cinemaId = ViewBag.CinemaId; // Lấy Id rạp từ ViewBag
+}
+
+<h1 class="h3 mb-2 text-gray-800">Quản lý Phòng chiếu</h1>
+<p class="mb-4">Rạp: <strong class="text-primary">@ViewBag.CinemaName</strong></p>
+
+<p>
+    @* Truyền cinemaId khi thêm phòng mới *@
+    <a asp-action="CreateRoom" asp-route-cinemaId="@cinemaId" class="btn btn-primary">
+        <i class="bi bi-plus-circle-fill me-2"></i> Thêm Phòng Mới
+    </a>
+    <a asp-action="CinemaManagement" class="btn btn-secondary ms-2">
+        <i class="bi bi-arrow-left-circle me-2"></i> Quay lại Danh sách Rạp
+    </a>
+</p>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Danh sách Phòng</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Tên Phòng</th>
+                        <th>Sức chứa</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var room in Model)
+                    {
+                        <tr>
+                            <td>@room.Name</td>
+                            <td>@room.Capacity</td>
+                            <td>
+                                <a asp-action="SeatManagement" asp-route-roomId="@room.RoomId" class="btn btn-success btn-sm me-1" title="Quản lý Ghế">
+                                    <i class="bi bi-grid-fill"></i> Ghế
+                                </a>
+                                <a asp-action="EditRoom" asp-route-id="@room.RoomId" class="btn btn-warning btn-sm me-1" title="Sửa Phòng">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a asp-action="DeleteRoom" asp-route-id="@room.RoomId" class="btn btn-danger btn-sm" title="Xóa Phòng">
+                                    <i class="bi bi-trash3-fill"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="3" class="text-center">Rạp này chưa có phòng nào.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

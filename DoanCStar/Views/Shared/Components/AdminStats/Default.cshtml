@@ -1,0 +1,37 @@
+﻿@model (int TotalMovies, int TotalUsers, int TotalPromotions, decimal TotalRevenue)
+
+<div class="col-md-3 mb-3">
+    <div class="card text-white bg-primary shadow">
+        <div class="card-body">
+            <h5 class="card-title">Tổng số Phim</h5>
+            <p class="card-text fs-3 fw-bold">@Model.TotalMovies</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 mb-3">
+    <div class="card text-white bg-success shadow">
+        <div class="card-body">
+            <h5 class="card-title">Tổng Doanh Thu</h5>
+            <p class="card-text fs-3 fw-bold">@Model.TotalRevenue.ToString("C0")</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 mb-3">
+    <div class="card text-white bg-info shadow">
+        <div class="card-body">
+            <h5 class="card-title">Tổng số tài khoản</h5>
+            <p class="card-text fs-3 fw-bold">@Model.TotalUsers</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 mb-3">
+    <div class="card text-white bg-warning shadow">
+        <div class="card-body">
+            <h5 class="card-title">Khuyến mãi</h5>
+            <p class="card-text fs-3 fw-bold">@Model.TotalPromotions</p>
+        </div>
+    </div>
+</div>

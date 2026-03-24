@@ -1,0 +1,98 @@
+﻿@model DoanCStar.ViewModels.ShowTimeViewModel
+@{
+    ViewData["Title"] = "Thêm suất chiếu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>@ViewData["Title"]</h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="MovieId" class="form-label"></label>
+                <select asp-for="MovieId" asp-items="ViewBag.Movies" class="form-select">
+                    <option value="">-- Chọn Phim --</option>
+                </select>
+                <span asp-validation-for="MovieId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CinemaId" class="form-label"></label>
+                <select asp-for="CinemaId" asp-items="ViewBag.Cinemas" class="form-select" id="CinemaDropdown">
+                    <option value="">-- Chọn Rạp --</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="RoomId" class="form-label"></label>
+                <select asp-for="RoomId" asp-items="ViewBag.Rooms" class="form-select" id="RoomDropdown" disabled>
+                    <option value="">-- Vui lòng chọn Rạp trước --</option>
+                </select>
+                <span asp-validation-for="RoomId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <input asp-for="StartTime"
+                       type="datetime-local"
+                       class="form-control"
+                       asp-format="{0:yyyy-MM-ddTHH:mm}" />
+                <span asp-validation-for="StartTime" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Thời gian kết thúc (Tự động tính)</label>
+                <input type="text" class="form-control" readonly placeholder="Sẽ hiển thị sau khi chọn phim và giờ bắt đầu" />
+            </div>
+
+            
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-success">Lưu</button>
+                <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+            // 1. TỰ ĐỘNG ĐIỀN NGÀY GIỜ HIỆN TẠI
+            var now = new Date();
+            now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); // Chỉnh múi giờ
+            var formattedDate = now.toISOString().slice(0, 16); // Lấy yyyy-MM-ddTHH:mm
+
+            // Tìm input StartTime và gán giá trị (nếu chưa có giá trị)
+            var startTimeInput = document.getElementById('StartTime');
+            if (startTimeInput && !startTimeInput.value) {
+                startTimeInput.value = formattedDate;
+            }
+
+            // 2. SCRIPT AJAX CẬP NHẬT PHÒNG (Giữ nguyên của bạn)
+            $('#CinemaDropdown').change(function () {
+                var cinemaId = $(this).val();
+                var roomDropdown = $('#RoomDropdown');
+
+                roomDropdown.empty();
+                roomDropdown.append('<option value="">-- Chọn Phòng --</option>');
+
+                if (cinemaId) {
+                    roomDropdown.prop('disabled', false);
+                    $.getJSON('/ShowTime/GetRoomsByCinema', { cinemaId: cinemaId }, function (data) {
+                        $.each(data, function (index, room) {
+                            roomDropdown.append('<option value="' + room.roomId + '">' + room.name + '</option>');
+                        });
+                    });
+                } else {
+                    roomDropdown.prop('disabled', true);
+                    roomDropdown.append('<option value="">-- Vui lòng chọn Rạp trước --</option>');
+                }
+            });
+        });
+    </script>
+}

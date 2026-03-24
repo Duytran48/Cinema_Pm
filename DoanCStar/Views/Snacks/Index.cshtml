@@ -1,0 +1,579 @@
+﻿@model IEnumerable<DoanCStar.Models.Concession>
+@{
+    ViewData["Title"] = "Đặt Bắp Nước";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* --- 1. CẤU HÌNH GIAO DIỆN CHUNG --- */
+    body {
+        background-color: #0f1219;
+        color: #fff;
+        padding-bottom: 120px; /* Chừa chỗ cho thanh thanh toán */
+    }
+
+    /* Ẩn footer của layout để không bị che khuất */
+    .main-footer {
+        display: none !important;
+    }
+
+    /* --- 2. CSS CARD SẢN PHẨM --- */
+    .snack-item {
+        background: #1a202e;
+        border: 1px solid #2d3548;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        transition: 0.2s;
+        cursor: pointer; /* Con trỏ bàn tay để biết click được */
+        position: relative;
+    }
+
+        .snack-item:hover {
+            border-color: #febb00; /* Viền vàng khi hover */
+            transform: translateY(-2px);
+        }
+
+    .snack-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .snack-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .snack-name {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .snack-desc {
+        font-size: 0.8rem;
+        color: #aaa;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .snack-price {
+        color: #febb00;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    /* --- 3. NÚT CỘNG TRỪ --- */
+    .qty-control {
+        display: flex;
+        align-items: center;
+        background: #0f1219;
+        border-radius: 4px;
+        border: 1px solid #444;
+        width: fit-content;
+        z-index: 2; /* Đảm bảo nút bấm nằm trên lớp click xem chi tiết */
+    }
+
+    .qty-btn {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+        .qty-btn:hover {
+            background-color: #333;
+            color: #febb00;
+        }
+
+    .qty-input {
+        width: 35px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        pointer-events: none;
+    }
+
+    /* --- 4. THANH THANH TOÁN DÍNH ĐÁY --- */
+    .checkout-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #0b1120;
+        border-top: 1px solid #2d3548;
+        padding: 15px 40px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.7);
+    }
+
+    .bar-left h5 {
+        text-transform: uppercase;
+        font-weight: 800;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .bar-left .selected-summary {
+        color: #ddd;
+        font-size: 0.95rem;
+        margin-top: 5px;
+    }
+
+    .bar-right {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        border-left: 1px solid #444;
+        padding-left: 40px;
+    }
+
+    .total-value {
+        color: #febb00;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .btn-checkout-bar {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+
+        .btn-checkout-bar:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .btn-checkout-bar:disabled {
+            border-color: #555;
+            color: #555;
+            cursor: not-allowed;
+        }
+
+    /* --- 5. CSS MODAL (CHỌN PHƯƠNG THỨC & CHI TIẾT) --- */
+    .payment-option {
+        border: 1px solid #444;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+        background: #212529;
+        color: #fff;
+    }
+
+        .payment-option:hover {
+            background: #2c3036;
+        }
+
+        .payment-option.active {
+            border-color: #666;
+            background: #2c3036;
+        }
+
+    .radio-circle {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #6c757d;
+        border-radius: 50%;
+        margin-right: 15px;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .payment-option.active .radio-circle {
+        border-color: #febb00;
+    }
+
+        .payment-option.active .radio-circle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: #febb00;
+            border-radius: 50%;
+        }
+
+    /* Modal chi tiết */
+    .detail-modal-content {
+        background-color: #1a202e;
+        color: #fff;
+        border: 1px solid #444;
+        border-radius: 12px;
+    }
+
+    .detail-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #333;
+    }
+
+    .desc-content {
+        max-height: 80px;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        position: relative;
+    }
+
+        .desc-content.collapsed::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(transparent, #1a202e);
+        }
+
+        .desc-content.expanded {
+            max-height: 500px;
+        }
+
+            .desc-content.expanded::after {
+                display: none;
+            }
+
+    .btn-toggle-desc {
+        color: #febb00;
+        font-size: 0.9rem;
+        cursor: pointer;
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 20px;
+        color: #888;
+    }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+</style>
+
+<div class="container py-5">
+    <h3 class="fw-bold text-warning mb-4 border-start border-4 border-warning ps-3">CHỌN COMBO & BẮP NƯỚC</h3>
+
+    @if (!Model.Any())
+    {
+        <div class="empty-state">
+            <i class="bi bi-inbox"></i>
+            <h4>Chưa có sản phẩm nào</h4>
+            <p>Vui lòng quay lại sau.</p>
+            <a href="/" class="btn btn-outline-light mt-3">Về trang chủ</a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="snack-item" onclick="showDetail('@item.ImageUrl', '@item.Name', '@item.Price', `@item.Description`)">
+
+                        <img src="@(string.IsNullOrEmpty(item.ImageUrl) ? "/images/default-product.png" : item.ImageUrl)"
+                             class="snack-img" alt="@item.Name"
+                             onerror="this.src='https://via.placeholder.com/120x120?text=No+Image'">
+
+                        <div class="snack-info">
+                            <div>
+                                <div class="snack-name">@item.Name</div>
+                                <div class="snack-desc">@item.Description</div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-end mt-3">
+                                <div class="snack-price">@item.Price.ToString("N0") VNĐ</div>
+
+                                <div class="qty-control" onclick="event.stopPropagation()">
+                                    <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="0"
+                                           data-id="@item.ConcessionId"
+                                           data-name="@item.Name"
+                                           data-price="@item.Price">
+                                    <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<div class="checkout-bar">
+    <div class="bar-left">
+        <h5>CINESTAR ĐÀ LẠT (TP.ĐÀ LẠT)</h5>
+        <div class="selected-summary" id="summary-text">Chưa chọn món</div>
+    </div>
+    <div class="bar-right">
+        <div class="total-section">
+            <span class="total-label">Tạm tính</span>
+            <span class="total-value" id="total-display">0 VNĐ</span>
+        </div>
+        <button class="btn-checkout-bar" id="btnOpenPayment" onclick="openPaymentModal()" disabled>
+            THANH TOÁN
+        </button>
+    </div>
+</div>
+
+<div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content detail-modal-content">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title text-warning fw-bold text-uppercase">Chi tiết sản phẩm</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img src="" id="modal-img" class="detail-img" alt="Product Image">
+                <h3 id="modal-title" class="text-white fw-bold text-uppercase mb-2 fs-4"></h3>
+                <div id="modal-price" class="fs-5 fw-bold text-warning mb-3 pb-3 border-bottom border-secondary"></div>
+                <h6 class="text-white-50 fw-bold text-uppercase mb-2 small">Mô tả:</h6>
+                <div class="desc-wrapper">
+                    <div id="modal-desc" class="desc-content collapsed"></div>
+                    <span id="toggle-desc-btn" class="btn-toggle-desc" onclick="toggleDesc()">Xem thêm...</span>
+                </div>
+            </div>
+            <div class="modal-footer border-0 pt-2">
+                <button type="button" class="btn btn-secondary w-100 fw-bold py-2" data-bs-dismiss="modal">ĐÓNG</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="loginWarningModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-warning">
+            <div class="modal-header border-warning">
+                <h5 class="modal-title text-warning fw-bold text-uppercase">
+                    <i class="bi bi-person-circle me-2"></i> Vui lòng đăng nhập
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center py-4">
+                <p class="fs-5 mb-4">Bạn cần đăng nhập tài khoản thành viên để tích điểm và thanh toán đơn hàng.</p>
+                <div class="d-flex gap-2 justify-content-center">
+                    <button type="button" class="btn btn-warning fw-bold px-4" onclick="openMainLoginModal()">
+                        ĐĂNG NHẬP NGAY
+                    </button>
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">ĐÓNG</button>
+                </div>
+                <div class="mt-3 small">
+                    Chưa có tài khoản? <a href="#" onclick="openMainRegisterModal()" class="text-warning text-decoration-none">Đăng ký tại đây</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">XÁC NHẬN THANH TOÁN</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-white-50 mb-3">Tổng tiền thanh toán: <span class="text-warning fw-bold fs-5" id="modal-total">0 VNĐ</span></p>
+
+                <h6 class="text-white mb-3 fw-bold">Chọn phương thức thanh toán</h6>
+
+                <div class="payment-option active" onclick="selectPayment('OFFLINE')">
+                    <div class="radio-circle"></div><span>Thanh toán tại quầy</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('ATM')">
+                    <div class="radio-circle"></div><span>Thẻ nội địa / Internet Banking</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('VISA')">
+                    <div class="radio-circle"></div><span>Visa / MasterCard</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('EWALLET')">
+                    <div class="radio-circle"></div><span>Ví điện tử (Momo, ZaloPay, ...)</span>
+                </div>
+
+                <form action="/Snacks/ProcessOrder" method="post" id="paymentForm" class="mt-4">
+                    <input type="hidden" name="OrderDataJson" id="hiddenOrderData">
+                    <input type="hidden" name="PaymentMethod" id="hiddenPaymentMethod" value="OFFLINE">
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-3 text-uppercase fs-5">XÁC NHẬN THANH TOÁN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        /* --- LOGIC GIỎ HÀNG --- */
+        function updateQty(btn, change) {
+            const input = btn.parentElement.querySelector('.qty-input');
+            let val = parseInt(input.value) + change;
+            if (val < 0) val = 0;
+            input.value = val;
+            renderFooter();
+        }
+
+        function renderFooter() {
+            const summaryText = document.getElementById('summary-text');
+            const totalDisplay = document.getElementById('total-display');
+            const btnOpen = document.getElementById('btnOpenPayment');
+            let total = 0;
+            let itemsName = [];
+            let dataArray = [];
+
+            document.querySelectorAll('.qty-input').forEach(input => {
+                const qty = parseInt(input.value);
+                if (qty > 0) {
+                    const name = input.getAttribute('data-name');
+                    const price = parseFloat(input.getAttribute('data-price'));
+                    total += price * qty;
+                    itemsName.push(`${qty} ${name}`);
+                    dataArray.push(`${input.getAttribute('data-id')}:${qty}`);
+                }
+            });
+
+            if (itemsName.length > 0) {
+                summaryText.innerText = itemsName.join(' | ');
+                totalDisplay.innerText = total.toLocaleString('vi-VN') + " VNĐ";
+                btnOpen.disabled = false;
+            } else {
+                summaryText.innerText = "Chưa chọn món";
+                totalDisplay.innerText = "0 VNĐ";
+                btnOpen.disabled = true;
+            }
+
+            window.currentOrderData = { dataString: dataArray.join(','), totalAmount: total };
+        }
+
+        /* --- LOGIC THANH TOÁN --- */
+        function openPaymentModal() {
+            if (!window.currentOrderData || window.currentOrderData.totalAmount === 0) return;
+
+            // Check Login
+            var isAuthenticated = '@User.Identity.IsAuthenticated'.toLowerCase() === 'true';
+            if (!isAuthenticated) {
+                const loginModal = new bootstrap.Modal(document.getElementById('loginWarningModal'));
+                loginModal.show();
+                return;
+            }
+
+            // Đổ dữ liệu vào Modal Thanh Toán
+            document.getElementById('modal-total').innerText = window.currentOrderData.totalAmount.toLocaleString('vi-VN') + " VNĐ";
+            document.getElementById('hiddenOrderData').value = window.currentOrderData.dataString;
+
+            const modal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            modal.show();
+        }
+
+        function selectPayment(method) {
+            document.querySelectorAll('.payment-option').forEach(el => el.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            document.getElementById('hiddenPaymentMethod').value = method;
+        }
+
+        /* --- LOGIC XEM CHI TIẾT (Không cần login) --- */
+        function showDetail(imgUrl, name, price, desc) {
+            document.getElementById('modal-img').src = imgUrl || '/images/default-product.png';
+            document.getElementById('modal-title').innerText = name;
+            document.getElementById('modal-price').innerText = parseFloat(price).toLocaleString('vi-VN') + " VNĐ";
+            document.getElementById('modal-desc').innerText = desc;
+
+            // Reset trạng thái thu gọn
+            const descEl = document.getElementById('modal-desc');
+            const btnEl = document.getElementById('toggle-desc-btn');
+            descEl.classList.remove('expanded');
+            descEl.classList.add('collapsed');
+            btnEl.innerText = "Xem thêm...";
+
+            if (desc.length < 100) {
+                btnEl.style.display = 'none';
+                descEl.classList.remove('collapsed');
+            } else {
+                btnEl.style.display = 'inline-block';
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById('detailModal'));
+            modal.show();
+        }
+
+        function toggleDesc() {
+            const descEl = document.getElementById('modal-desc');
+            const btnEl = document.getElementById('toggle-desc-btn');
+            if (descEl.classList.contains('collapsed')) {
+                descEl.classList.remove('collapsed'); descEl.classList.add('expanded'); btnEl.innerText = "Thu gọn";
+            } else {
+                descEl.classList.remove('expanded'); descEl.classList.add('collapsed'); btnEl.innerText = "Xem thêm...";
+            }
+        }
+
+        /* --- LOGIC GỌI MODAL LOGIN CHÍNH --- */
+        function openMainLoginModal() {
+            // Đóng modal cảnh báo
+            const warningEl = document.getElementById('loginWarningModal');
+            const warningModal = bootstrap.Modal.getInstance(warningEl);
+            if (warningModal) warningModal.hide();
+
+            // Mở modal chính (authModal từ _Layout)
+            const authEl = document.getElementById('authModal');
+            if (authEl) {
+                const authModal = new bootstrap.Modal(authEl);
+                authModal.show();
+                // Chuyển sang tab Đăng nhập
+                const loginTabBtn = document.querySelector('#authModal #login-tab');
+                if(loginTabBtn) { const t = new bootstrap.Tab(loginTabBtn); t.show(); }
+            } else {
+                // Fallback nếu không có modal (ít xảy ra)
+                window.location.href = '/Account/Login';
+            }
+        }
+
+        function openMainRegisterModal() {
+             const warningEl = document.getElementById('loginWarningModal');
+             const warningModal = bootstrap.Modal.getInstance(warningEl);
+             if (warningModal) warningModal.hide();
+
+             const authEl = document.getElementById('authModal');
+             if (authEl) {
+                 const authModal = new bootstrap.Modal(authEl);
+                 authModal.show();
+                 // Chuyển sang tab Đăng ký
+                 const registerTabBtn = document.querySelector('#authModal #register-tab');
+                 if(registerTabBtn) { const t = new bootstrap.Tab(registerTabBtn); t.show(); }
+             }
+        }
+    </script>
+}

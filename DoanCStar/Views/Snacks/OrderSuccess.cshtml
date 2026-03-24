@@ -1,0 +1,138 @@
+﻿@model DoanCStar.ViewModels.SnackSuccessViewModel
+@{
+    ViewData["Title"] = "Đặt món thành công";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #0f1219;
+        color: #fff;
+    }
+
+    .success-container {
+        background-color: #1a202e;
+        border-radius: 10px;
+        padding: 40px;
+        margin-top: 50px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .success-title {
+        color: #28a745;
+        font-weight: 900;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .code-label {
+        color: #aaa;
+    }
+
+    .order-code {
+        color: #ffc107;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .payment-code {
+        color: #0dcaf0;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .item-list {
+        margin: 20px 0;
+        border-top: 1px solid #444;
+        border-bottom: 1px solid #444;
+        padding: 20px 0;
+    }
+
+    .item-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    .total-price {
+        font-size: 1.8rem;
+        color: #ffc107;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .btn-home {
+        border: 1px solid #fff;
+        color: #fff;
+        background: transparent;
+        padding: 10px 30px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .btn-history {
+        background: #ffc107;
+        color: #000;
+        border: none;
+        padding: 10px 30px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .btn-home:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .btn-history:hover {
+        background: #e0a800;
+        color: #000;
+    }
+</style>
+
+<div class="container pb-5">
+    <div class="success-container">
+        <div class="success-title text-center">
+            ĐẶT MÓN THÀNH CÔNG
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <span class="code-label">Mã đơn hàng:</span>
+                <span class="order-code">@Model.OrderCode</span>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <span class="code-label">Mã thanh toán:</span>
+                <span class="payment-code">@Model.PaymentCode</span>
+            </div>
+        </div>
+
+        <div class="item-list">
+            <h5 class="fw-bold text-white mb-3">CHI TIẾT ĐƠN HÀNG</h5>
+            @foreach (var item in Model.Items)
+            {
+                <div class="item-row">
+                    <div>
+                        <span class="fw-bold text-warning">@item.Name</span>
+                        <span class="text-muted ms-2">x @item.Quantity</span>
+                    </div>
+                    <div>@((item.Price * item.Quantity).ToString("N0")) đ</div>
+                </div>
+            }
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <span class="fs-5">Tổng tiền:</span>
+            <div class="total-price">@Model.TotalAmount.ToString("N0") đ</div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-controller="Home" asp-action="Index" class="btn-home">VỀ TRANG CHỦ</a>
+            <a asp-controller="Booking" asp-action="History" class="btn-history">XEM LỊCH SỬ</a>
+        </div>
+    </div>
+</div>

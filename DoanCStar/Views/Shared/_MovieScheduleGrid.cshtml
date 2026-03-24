@@ -1,0 +1,127 @@
+﻿@model List<DoanCStar.Models.Movie>
+
+@if (!Model?.Any() ?? true)
+{
+    <div class="text-center py-5">
+        <p class="text-white-50 fs-3">Hiện chưa có phim @(Context.Request.Path.Value.Contains("sapchieu") ? "sắp chiếu" : "đang chiếu") tại rạp này.</p>
+    </div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 justify-content-center">
+        @foreach (var movie in Model)
+        {
+            <div class="col">
+                <div class="movie-card h-100 position-relative overflow-hidden rounded-3 shadow-lg">
+
+                    <!-- Poster + Overlay -->
+                    <a asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.MovieId" class="movie-poster-box d-block">
+                        <img src="@movie.ImageUrl"
+                             class="img-fluid w-100"
+                             alt="@movie.Title"
+                             style="height:420px; object-fit:cover;" />
+
+                        <div class="movie-info-overlay">
+                            <ul class="movie-info-list">
+                                <li><i class="bi bi-tag-fill"></i> <span>@movie.Genre</span></li>
+                                <li><i class="bi bi-clock-fill"></i> <span>@movie.Duration phút</span></li>
+                                <li><i class="bi bi-globe"></i> <span>@movie.Country</span></li>
+                                <li><i class="bi bi-chat-left-dots-fill"></i> <span>@movie.Language</span></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <!-- Tên phim + Nút -->
+                    <div class="p-3 bg-dark">
+                        <h6 class="fw-bold text-white text-center mb-3" style="min-height:50px; display:flex; align-items:center; justify-content:center;">
+                            @movie.Title
+                        </h6>
+
+                        <div class="d-flex justify-content-center gap-2 flex-wrap">
+                            <!-- Nút Xem trailer -->
+                            <a href="javascript:void(0);"
+                               class="btn btn-sm btn-outline-warning js-play-trailer flex-fill"
+                               data-trailer-url="@movie.TrailerUrl"
+                               data-movie-title="@movie.Title">
+                                <i class="bi bi-play-circle"></i> Xem trailer
+                            </a>
+
+                            <!-- Nút Đặt vé / Tìm hiểu thêm -->
+                            @if (movie.Status == "Đang chiếu")
+                            {
+                                <a asp-controller="Home"
+                                   asp-action="MovieDetails"
+                                   asp-route-id="@movie.MovieId"
+                                   class="btn btn-sm btn-animate btn-ticket flex-fill">
+                                    <i class="bi bi-ticket-perforated"></i> Đặt vé
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Home"
+                                   asp-action="MovieDetails"
+                                   asp-route-id="@movie.MovieId"
+                                   class="btn btn-sm btn-info flex-fill text-white">
+                                    <i class="bi bi-info-circle"></i> Tìm hiểu thêm
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<!-- Copy nguyên CSS đẹp từ Movies.cshtml -->
+<style>
+    .movie-card {
+        background: #111;
+        transition: transform 0.4s ease;
+        border: 2px solid transparent;
+    }
+
+        .movie-card:hover {
+            transform: translateY(-12px);
+            border-color: #ffd700;
+            box-shadow: 0 15px 30px rgba(255,215,0,0.3) !important;
+        }
+
+            .movie-card:hover img {
+                transform: scale(1.08);
+                transition: 0.6s;
+            }
+
+    .movie-info-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.9));
+        color: white;
+        padding: 20px;
+        transform: translateY(100%);
+        transition: 0.4s ease;
+    }
+
+    .movie-card:hover .movie-info-overlay {
+        transform: translateY(0);
+    }
+
+    .movie-info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+        .movie-info-list li {
+            margin: 6px 0;
+        }
+
+    .btn-animate {
+        background: linear-gradient(45deg, #ffd700, #ffed4e);
+        color: #000 !important;
+        font-weight: bold;
+    }
+</style>

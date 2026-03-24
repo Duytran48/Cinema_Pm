@@ -1,0 +1,1887 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\booking\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\booking\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\helpers\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\helpers\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\booking\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\booking\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\_bookinglayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\_bookinglayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\bookingsummary\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\bookingsummary\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\paymentmethodlist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\paymentmethodlist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\bookingsummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\bookingsummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\paymentmethodlistviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\paymentmethodlistviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\bookingstepsviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\bookingstepsviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\promotionviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\promotionviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\booking\\complete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\booking\\complete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201155257_AddPointsColumnToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DoanCStar\\Migrations\\20251201155257_AddPointsColumnToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\promotionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\promotionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\revenuemanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\revenuemanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\revenueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\revenueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\bookingmanagementdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\bookingmanagementdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\booking\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\booking\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\editbookingmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\editbookingmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\showtimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\showtimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201144711_Add_Price_Columns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DoanCStar\\Migrations\\20251201144711_Add_Price_Columns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\showtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\showtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\bookingmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\bookingmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\bookingeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\bookingeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\addseatrowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\addseatrowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\moviedetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\moviedetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\movieviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\quickbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\quickbookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\scheduleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\scheduleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\seatgroupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\seatgroupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\showtimeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\showtimeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\bookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\bookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\cinema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\cinema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\bookingseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\bookingseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\bookingconcession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\bookingconcession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\usermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\usermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\concession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\concession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\quickbookingviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\quickbookingviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\booking\\selectseats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\booking\\selectseats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\cinema\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\cinema\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\cinemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\cinemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\concessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\concessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\quickbooking\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\quickbooking\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\bookingconcessionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\bookingconcessionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\comingsoonviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\comingsoonviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\nowshowing\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\nowshowing\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\nowshowingviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\nowshowingviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\comingsoon\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\comingsoon\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\concessionlistviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\concessionlistviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\otherservicesviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\otherservicesviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\cinemalist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\cinemalist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewcomponents\\cinemalistviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewcomponents\\cinemalistviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\snacks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\snacks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\snackorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\snackorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\controllers\\snackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\controllers\\snackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\cinemadropdownviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\cinemadropdownviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\snackviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\snackviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\booking\\selectconcessions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\booking\\selectconcessions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\snacks\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\snacks\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\snacks\\ordersuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\snacks\\ordersuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\_pagestyles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\_pagestyles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\movie\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\movie\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\movie\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\movie\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\movie\\_movieform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\movie\\_movieform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\viewmodels\\autogenerateseatsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\viewmodels\\autogenerateseatsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\home\\moviedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\home\\moviedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\adminconcessions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\adminconcessions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\concessionlist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\concessionlist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\shared\\components\\banner\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\shared\\components\\banner\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\cinema\\generateseats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\cinema\\generateseats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\showtime\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\showtime\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\showtime\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\showtime\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\showtime\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\showtime\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\showtime\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\showtime\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\showtime\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\showtime\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\LTW_Advance\\WebDoAn\\DoanCStar\\DoanCStar\\Migrations\\20251124065641_NewUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\cinema\\editcinema.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\cinema\\editcinema.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\cinema\\createcinema.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\cinema\\createcinema.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\cinema\\seatmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\cinema\\seatmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\admin\\cinema\\cinemamanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\admin\\cinema\\cinemamanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\movie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\movie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\views\\movie\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\views\\movie\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DLAPTOP/MovieTicketDB/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|c:\\users\\vikha\\desktop\\doancstar\\doancstar\\doancstar\\doancstar\\migrations\\20251201144757_intial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F26A346-FCD7-4CB4-8143-638BF4F14DCF}|DoanCStar\\DoanCStar.csproj|solutionrelative:doancstar\\migrations\\20251201144757_intial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Payment.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Payment.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\Payment.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Booking\\Payment.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\Payment.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Booking\\Payment.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Helpers\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Helpers\\SessionExtensions.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Helpers\\SessionExtensions.cs",
+              "RelativeToolTip": "DoanCStar\\Helpers\\SessionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Promotion.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Promotion.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Promotion.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Promotion.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Promotion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAKsBAAAAAAAAAAAIwMcBAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\History.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Booking\\History.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\History.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Booking\\History.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Account\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Account\\Profile.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAAACMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_BookingLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_BookingLayout.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\_BookingLayout.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_BookingLayout.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\_BookingLayout.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAKEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\PaymentViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\PaymentViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\PaymentViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\PaymentViewModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwBIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\PaymentMethodList\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\PaymentMethodList\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\PaymentMethodList\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\PaymentMethodList\\Default.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAUwC0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T16:18:09.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\BookingSummary\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\BookingSummary\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\BookingSummary\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\BookingSummary\\Default.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwDgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T16:18:46.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PaymentMethodListViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\PaymentMethodListViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\PaymentMethodListViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\PaymentMethodListViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\PaymentMethodListViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BookingSummaryViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\BookingSummaryViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\BookingSummaryViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\BookingSummaryViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\BookingSummaryViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookingStepsViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\BookingStepsViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\BookingStepsViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\BookingStepsViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\BookingStepsViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PromotionViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\PromotionViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\PromotionViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\PromotionViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\PromotionViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Complete.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\Complete.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Booking\\Complete.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\Complete.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Booking\\Complete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAwwHQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAgwIsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20251201155257_AddPointsColumnToUser.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201155257_AddPointsColumnToUser.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Migrations\\20251201155257_AddPointsColumnToUser.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201155257_AddPointsColumnToUser.cs",
+              "RelativeToolTip": "DoanCStar\\Migrations\\20251201155257_AddPointsColumnToUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T15:52:57.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PromotionsController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\PromotionsController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\PromotionsController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\PromotionsController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\PromotionsController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAqwJgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAPoAAAAAAAAAAAApwB4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\User.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\User.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RevenueViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\RevenueViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\RevenueViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\RevenueViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\RevenueViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T15:17:56.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\Edit.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Booking\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\Edit.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Booking\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T13:45:25.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RevenueManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\RevenueManagement.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\RevenueManagement.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\RevenueManagement.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\RevenueManagement.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAgwGMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T15:18:58.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ShowTimeController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\ShowTimeController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\ShowTimeController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\ShowTimeController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\ShowTimeController.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAkwMEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "BookingManagementDelete.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\BookingManagementDelete.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\BookingManagementDelete.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\BookingManagementDelete.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\BookingManagementDelete.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T23:49:57.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EditBookingManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\EditBookingManagement.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\EditBookingManagement.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\EditBookingManagement.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\EditBookingManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T23:21:05.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAmwFgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20251201144711_Add_Price_Columns.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201144711_Add_Price_Columns.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Migrations\\20251201144711_Add_Price_Columns.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201144711_Add_Price_Columns.cs",
+              "RelativeToolTip": "DoanCStar\\Migrations\\20251201144711_Add_Price_Columns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T14:47:11.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 114,
+              "Title": "20251201144757_Intial.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201144757_Intial.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Migrations\\20251201144757_Intial.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Migrations\\20251201144757_Intial.cs",
+              "RelativeToolTip": "DoanCStar\\Migrations\\20251201144757_Intial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T14:47:57.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Seat.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Seat.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Seat.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Seat.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Seat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ShowTime.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\ShowTime.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\ShowTime.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\ShowTime.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\ShowTime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BookingManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\BookingManagement.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\BookingManagement.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\BookingManagement.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\BookingManagement.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T23:14:27.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "BookingEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\BookingEditViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\BookingEditViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\BookingEditViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\BookingEditViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T13:42:06.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AddSeatRowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\AddSeatRowViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\AddSeatRowViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\AddSeatRowViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\AddSeatRowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MovieDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\MovieDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\MovieDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\MovieDetailsViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\MovieDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "MovieViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\MovieViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\MovieViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\MovieViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\MovieViewModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "QuickBookingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\QuickBookingViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\QuickBookingViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\QuickBookingViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\QuickBookingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ScheduleViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\ScheduleViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\ScheduleViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\ScheduleViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\ScheduleViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T13:52:43.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ShowTimeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\ShowTimeViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\ShowTimeViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\ShowTimeViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\ShowTimeViewModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwB4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BookingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\BookingViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\BookingViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\BookingViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\BookingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "SeatGroupViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\SeatGroupViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\SeatGroupViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\SeatGroupViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\SeatGroupViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "EditUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\EditUser.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\EditUser.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\EditUser.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\EditUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T23:49:01.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Booking.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Room.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Room.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Room.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T23:17:32.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Movie.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Cinema.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Cinema.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Cinema.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Cinema.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Cinema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "BookingSeat.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\BookingSeat.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\BookingSeat.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\BookingSeat.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\BookingSeat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T12:27:56.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "BookingConcession.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\BookingConcession.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\BookingConcession.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\BookingConcession.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\BookingConcession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T23:25:38.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ConcessionsController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\ConcessionsController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\ConcessionsController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\ConcessionsController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\ConcessionsController.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAowOQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwFAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UserManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\UserManagement.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\UserManagement.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\UserManagement.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\UserManagement.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T23:16:26.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "CinemaController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\CinemaController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\CinemaController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\CinemaController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\CinemaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "SelectSeats.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\SelectSeats.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Booking\\SelectSeats.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\SelectSeats.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Booking\\SelectSeats.cshtml",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAkwO4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Concession.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Concession.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\Concession.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\Concession.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\Concession.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "QuickBookingViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\QuickBookingViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\QuickBookingViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\QuickBookingViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\QuickBookingViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Schedule.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Cinema\\Schedule.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Cinema\\Schedule.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Cinema\\Schedule.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Cinema\\Schedule.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\QuickBooking\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\QuickBooking\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\QuickBooking\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\QuickBooking\\Default.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAiwPgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Program.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Program.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Program.cs",
+              "RelativeToolTip": "DoanCStar\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wDQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BookingConcessionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\BookingConcessionViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\BookingConcessionViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\BookingConcessionViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\BookingConcessionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\SearchController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\SearchController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ComingSoonViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\ComingSoonViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\ComingSoonViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\ComingSoonViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\ComingSoonViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\NowShowing\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\NowShowing\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\NowShowing\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\NowShowing\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "NowShowingViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\NowShowingViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\NowShowingViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\NowShowingViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\NowShowingViewComponent.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADgvyIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\ComingSoon\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\ComingSoon\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\ComingSoon\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\ComingSoon\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ConcessionListViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\ConcessionListViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\ConcessionListViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\ConcessionListViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\ConcessionListViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "OtherServicesViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\OtherServicesViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\OtherServicesViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\OtherServicesViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\OtherServicesViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\CinemaList\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\CinemaList\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\CinemaList\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\CinemaList\\Default.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "CinemaListViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\CinemaListViewComponent.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewComponents\\CinemaListViewComponent.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewComponents\\CinemaListViewComponent.cs",
+              "RelativeToolTip": "DoanCStar\\ViewComponents\\CinemaListViewComponent.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "SnackOrder.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\SnackOrder.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\SnackOrder.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\SnackOrder.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\SnackOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\appsettings.json",
+              "RelativeDocumentMoniker": "DoanCStar\\appsettings.json",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\appsettings.json",
+              "RelativeToolTip": "DoanCStar\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-29T11:12:26.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Snacks\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Snacks\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Snacks\\Index.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Snacks\\Index.cshtml",
+              "ViewState": "AgIAACgCAAAAAAAAAAAswEICAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAswGsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "SnacksController.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\SnacksController.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Controllers\\SnacksController.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Controllers\\SnacksController.cs",
+              "RelativeToolTip": "DoanCStar\\Controllers\\SnacksController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAcwFIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "HistoryViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\HistoryViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\HistoryViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\HistoryViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\HistoryViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "CinemaDropdownViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\CinemaDropdownViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\CinemaDropdownViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\CinemaDropdownViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\CinemaDropdownViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "SnackViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\SnackViewModels.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\SnackViewModels.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\SnackViewModels.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\SnackViewModels.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "SelectConcessions.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\SelectConcessions.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Booking\\SelectConcessions.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Booking\\SelectConcessions.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Booking\\SelectConcessions.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwBwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Snacks\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Snacks\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Snacks\\Checkout.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Snacks\\Checkout.cshtml",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAswLcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "OrderSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Snacks\\OrderSuccess.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Snacks\\OrderSuccess.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Snacks\\OrderSuccess.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Snacks\\OrderSuccess.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAswIYAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DoanCStar\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\PaymentStatus.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\PaymentStatus.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "_PageStyles.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_PageStyles.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\_PageStyles.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\_PageStyles.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\_PageStyles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJYFAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "_MovieForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\_MovieForm.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Movie\\_MovieForm.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\_MovieForm.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Movie\\_MovieForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Create.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Movie\\Create.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Create.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Movie\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Edit.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Movie\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Edit.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Movie\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "AutoGenerateSeatsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\AutoGenerateSeatsViewModel.cs",
+              "RelativeDocumentMoniker": "DoanCStar\\ViewModels\\AutoGenerateSeatsViewModel.cs",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\ViewModels\\AutoGenerateSeatsViewModel.cs",
+              "RelativeToolTip": "DoanCStar\\ViewModels\\AutoGenerateSeatsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:12:26.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "MovieDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\MovieDetails.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Home\\MovieDetails.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Home\\MovieDetails.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Home\\MovieDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\AdminConcessions\\Create.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\AdminConcessions\\Create.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\AdminConcessions\\Create.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\AdminConcessions\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\ConcessionList\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\ConcessionList\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\ConcessionList\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\ConcessionList\\Default.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\Banner\\Default.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Shared\\Components\\Banner\\Default.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Shared\\Components\\Banner\\Default.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Shared\\Components\\Banner\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "GenerateSeats.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\GenerateSeats.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\Cinema\\GenerateSeats.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\GenerateSeats.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\Cinema\\GenerateSeats.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEYAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Create.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\ShowTime\\Create.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Create.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\ShowTime\\Create.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwDEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Details.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\ShowTime\\Details.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Details.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\ShowTime\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Edit.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\ShowTime\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Edit.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\ShowTime\\Edit.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\ShowTime\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Index.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\ShowTime\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Delete.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\ShowTime\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\ShowTime\\Delete.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\ShowTime\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "20251124065641_NewUpdate.cs",
+              "DocumentMoniker": "E:\\LTW_Advance\\WebDoAn\\DoanCStar\\DoanCStar\\Migrations\\20251124065641_NewUpdate.cs",
+              "ToolTip": "E:\\LTW_Advance\\WebDoAn\\DoanCStar\\DoanCStar\\Migrations\\20251124065641_NewUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T06:56:41.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "EditCinema.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\EditCinema.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\Cinema\\EditCinema.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\EditCinema.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\Cinema\\EditCinema.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "CreateCinema.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\CreateCinema.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\Cinema\\CreateCinema.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\CreateCinema.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\Cinema\\CreateCinema.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "SeatManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\SeatManagement.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\Cinema\\SeatManagement.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\SeatManagement.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\Cinema\\SeatManagement.cshtml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAwwG8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "CinemaManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\CinemaManagement.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Admin\\Cinema\\CinemaManagement.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Admin\\Cinema\\CinemaManagement.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Admin\\Cinema\\CinemaManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Movie\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Index.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Movie\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Details.cshtml",
+              "RelativeDocumentMoniker": "DoanCStar\\Views\\Movie\\Details.cshtml",
+              "ToolTip": "C:\\Users\\vikha\\Desktop\\DoanCStar\\DoanCStar\\DoanCStar\\DoanCStar\\Views\\Movie\\Details.cshtml",
+              "RelativeToolTip": "DoanCStar\\Views\\Movie\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:12:26.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DLAPTOP/MovieTicketDB/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DLAPTOP/MovieTicketDB/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-05T08:17:58.713Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

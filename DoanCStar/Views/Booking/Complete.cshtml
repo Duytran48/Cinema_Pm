@@ -1,0 +1,89 @@
+@model DoanCStar.Models.Booking
+
+@{
+    ViewData["Title"] = "Hoàn tất đặt vé";
+    Layout = "_BookingLayout";
+    var seatNames = string.Join(", ",
+        Model.BookingSeats
+            .OrderBy(bs => bs.Seat.Row)
+            .ThenBy(bs => bs.Seat.Number)
+            .Select(bs => $"{bs.Seat.Row}{bs.Seat.Number}")
+    );
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="p-4 rounded shadow-sm bg-dark">
+                <h3 class="text-success fw-bold mb-3">
+                    ĐẶT VÉ THÀNH CÔNG
+                </h3>
+                @if (ViewBag.PointsEarned > 0)
+                {
+                    <div class="alert alert-warning d-inline-block mt-2 px-5">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        Chúc mừng! Bạn đã tích được <strong>+@ViewBag.PointsEarned điểm</strong> từ giao dịch này.
+                    </div>
+                }
+                <p class="text-white-50 mb-4">
+                    Mã đặt chỗ: <span class="text-warning fw-bold">@Model.BookingCode</span><br />
+                    Mã thanh toán: <span class="text-info fw-bold">@Model.Payment?.PaymentCode</span>
+                </p>
+
+                <div class="mb-3">
+                    <h5 class="text-white fw-bold">@Model.ShowTime.Movie.Title</h5>
+                    <div class="text-white-50">
+                        Rạp: <span class="text-white">@Model.ShowTime.Room.Cinema.Name</span><br />
+                        Phòng: <span class="text-white">@Model.ShowTime.Room.Name</span><br />
+                        Suất chiếu:
+                        <span class="text-white">
+                            @Model.ShowTime.StartTime.ToString("dd/MM/yyyy HH:mm")
+                        </span>
+                    </div>
+                </div>
+
+                <hr class="border-secondary" />
+
+                <div class="mb-3 text-white-50">
+                    Ghế: <span class="text-warning fw-bold">@seatNames</span>
+                </div>
+
+                @if (Model.BookingConcessions != null && Model.BookingConcessions.Any())
+                {
+                    <div class="mb-3">
+                        <span class="text-white-50">Bắp & nước:</span>
+                        <ul class="text-white small mt-2">
+                            @foreach (var c in Model.BookingConcessions)
+                            {
+                                <li>
+                                    @c.Concession.Name x @c.Quantity
+                                    (<span>@c.Subtotal.ToString("N0") đ</span>)
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+
+                <hr class="border-secondary" />
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-white">Tổng tiền:</span>
+                    <span class="text-warning fw-bold fs-5">
+                        @Model.TotalPrice.ToString("N0") đ
+                    </span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-controller="Home" asp-action="Index"
+                       class="btn btn-outline-light">
+                        VỀ TRANG CHỦ
+                    </a>
+                    <a asp-controller="Account" asp-action="Profile"
+                       class="btn btn-warning">
+                        XEM LỊCH SỬ ĐẶT VÉ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

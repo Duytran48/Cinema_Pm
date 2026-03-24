@@ -1,0 +1,118 @@
+@model DoanCStar.ViewModels.PaymentViewModel
+
+@{
+    ViewData["Title"] = "Thanh toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    decimal concessionTotal = Model.Concessions != null ? Model.Concessions.Sum(x => x.Price * x.Quantity) : 0;
+    decimal initialTotal = Model.SeatTotalPrice + concessionTotal;
+}
+
+<div class="container py-5">
+    <form asp-controller="Booking" asp-action="ProcessPayment" method="post" id="paymentForm">
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" asp-for="ShowTimeId" />
+        <input type="hidden" asp-for="SelectedSeatIds" />
+        @* Input ẩn để lưu ID khuyến mãi và số tiền giảm *@
+        <input type="hidden" asp-for="PromotionId" id="hiddenPromotionId" />
+        <input type="hidden" asp-for="DiscountAmount" id="hiddenDiscountAmount" value="0" />
+
+        @if (Model.Concessions != null)
+        {
+            for (int i = 0; i < Model.Concessions.Count; i++)
+            {
+                <input type="hidden" name="Concessions[@i].ConcessionId" value="@Model.Concessions[i].ConcessionId" />
+                <input type="hidden" name="Concessions[@i].Quantity" value="@Model.Concessions[i].Quantity" />
+            }
+        }
+
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                @await Component.InvokeAsync("BookingSteps", new { step = 3 })
+
+                <div class="card bg-dark text-white border-secondary mb-4">
+                    <div class="card-header border-secondary">
+                        <h5 class="m-0 text-warning">Khuyến mãi / Voucher</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-2">
+                            <input type="text" id="promoCodeInput" class="form-control" placeholder="Nhập mã giảm giá (VD: CINESTAR10)" />
+                            <button class="btn btn-warning fw-bold" type="button" id="btnApplyPromo">Áp dụng</button>
+                        </div>
+                        <div id="promoMessage" class="small"></div>
+                    </div>
+                </div>
+
+                @await Component.InvokeAsync("PaymentMethodList", Model)
+            </div>
+
+            <div class="col-lg-4">
+              
+                @await Component.InvokeAsync("BookingSummary", Model)
+
+               
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(function() {
+        var originalTotal = parseFloat('@initialTotal.ToString(System.Globalization.CultureInfo.InvariantCulture)');
+
+        $("#btnApplyPromo").click(function() {
+            var msg = $("#promoMessage");
+            var rawCode = $("#promoCodeInput").val();
+            var code = rawCode ? rawCode.trim().toUpperCase() : "";
+
+            if (!code) {
+                msg.text("Vui lòng nhập mã.").removeClass("text-success").addClass("text-danger");
+                return;
+            }
+
+            var btn = $(this);
+            btn.prop("disabled", true).text("Đang kiểm tra...");
+
+            // Lấy AntiForgery token (nếu có)
+            var token = $('input[name="__RequestVerificationToken"]').val();
+
+            $.ajax({
+                url: "/Booking/CheckPromotion",
+                type: "POST",
+                data: { promoCode: code, currentTotal: originalTotal, __RequestVerificationToken: token },
+                success: function(res) {
+                    btn.prop("disabled", false).text("Áp dụng");
+
+                    if (res.success) {
+                        msg.text(res.message).removeClass("text-danger").addClass("text-success");
+
+                        // dùng đúng id hiển thị giảm giá
+                        $("#discountRow").slideDown();
+
+                        $("#discountAmountDisplay").text("- " + res.discountAmount.toLocaleString('vi-VN') + " đ");
+                        $("#finalTotalDisplay").text(res.newTotal.toLocaleString('vi-VN') + " đ");
+
+                        $("#hiddenPromotionId").val(res.promotionId);
+                        $("#hiddenDiscountAmount").val(res.discountAmount);
+
+                        $("#promoCodeInput").prop("readonly", true);
+                        btn.prop("disabled", true).text("Đã dùng");
+                    } else {
+                        msg.text(res.message).removeClass("text-success").addClass("text-danger");
+
+                        $("#discountRow").slideUp();
+                        $("#hiddenPromotionId").val("");
+                        $("#hiddenDiscountAmount").val(0);
+                        $("#finalTotalDisplay").text(originalTotal.toLocaleString('vi-VN') + " đ");
+                    }
+                },
+                error: function(xhr) {
+                    btn.prop("disabled", false).text("Áp dụng");
+                    msg.text("Lỗi kết nối server. Vui lòng thử lại.").removeClass("text-success").addClass("text-danger");
+                    console.error("Apply promo error:", xhr);
+                }
+            });
+        });
+    });
+</script>

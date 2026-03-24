@@ -1,0 +1,151 @@
+﻿@model DoanCStar.ViewModels.BookingConcessionViewModel
+
+@{
+    ViewData["Title"] = "Chọn Bắp Nước";
+    Layout = "_BookingLayout"; // Dùng layout booking
+}
+
+<div class="container py-5">
+
+   
+
+    <div class="row">
+
+        <div class="col-lg-8 mb-4">
+            <div class="booking-main-content p-4 rounded shadow-sm">
+                @await Component.InvokeAsync("ConcessionList")
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="booking-sidebar p-0 rounded shadow-sm sticky-top" style="top: 20px; z-index: 1020;">
+
+                <div class="d-flex p-3 border-bottom border-secondary bg-dark rounded-top">
+                    <img src="@Model.ImageUrl" class="rounded" style="width: 80px; height: 120px; object-fit: cover;">
+                    <div class="ms-3">
+                        <h5 class="text-white fw-bold mb-1">@Model.MovieTitle</h5>
+                        
+                    </div>
+                </div>
+
+                <div class="p-3 bg-dark">
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Rạp:</span> <span class="text-white text-end">@Model.CinemaName</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Phòng:</span> <span class="text-white text-end">@Model.RoomName</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Suất chiếu:</span> <span class="text-white text-end">@Model.StartTime</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span>Ghế:</span> <span class="text-white text-end text-break" style="max-width: 150px;">@Model.SelectedSeatNames</span>
+                    </div>
+
+                    <hr class="border-secondary" />
+
+                    <div id="selectedCombosContainer" class="mb-3">
+                    </div>
+
+                    <hr class="border-secondary" />
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-white fs-5">Tổng tiền:</span>
+                        <span id="finalTotalPrice" class="text-warning fw-bold fs-4">@Model.SeatTotalPrice.ToString("N0") đ</span>
+                    </div>
+                </div>
+
+                <div class="p-3 bg-dark rounded-bottom d-grid gap-2">
+                    <form asp-controller="Booking" asp-action="Payment" method="post" id="concessionForm">
+                        <input type="hidden" name="ShowTimeId" value="@Model.ShowTimeId" />
+                        <input type="hidden" name="SelectedSeatIds" value="@Model.SelectedSeatIds" />
+
+                        <input type="hidden" name="SelectedConcessions" id="hiddenConcessions" />
+
+                        <button type="submit" class="btn btn-warning w-100 py-3 fw-bold fs-5">
+                            THANH TOÁN
+                        </button>
+                    </form>
+                    <div class="p-3 bg-dark rounded-bottom d-grid gap-2">
+                        <form asp-controller="Booking" asp-action="Payment" ...>  </form>
+
+                        <form asp-controller="Booking" asp-action="SelectSeats" method="get">
+                            <input type="hidden" name="showTimeId" value="@Model.ShowTimeId" />
+                            <input type="hidden" name="selectedSeats" value="@Model.SelectedSeatIds" />
+
+                            <button type="submit" class="btn btn-outline-secondary w-100 fw-bold">
+                                QUAY LẠI CHỌN GHẾ
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Biến lưu tổng tiền ghế (cố định ở bước này)
+        const baseSeatPrice = @Model.SeatTotalPrice;
+        let selectedConcessions = {}; // Object lưu { id: quantity }
+
+        function updateQuantity(id, change) {
+            const input = document.getElementById('qty-' + id);
+            let currentQty = parseInt(input.value);
+            let newQty = currentQty + change;
+
+            if (newQty < 0) newQty = 0;
+            input.value = newQty;
+
+            // Cập nhật data
+            if (newQty > 0) {
+                selectedConcessions[id] = newQty;
+            } else {
+                delete selectedConcessions[id];
+            }
+
+            updateSidebar();
+        }
+
+        function updateSidebar() {
+            const container = document.getElementById('selectedCombosContainer');
+            const totalEl = document.getElementById('finalTotalPrice');
+            const hiddenInput = document.getElementById('hiddenConcessions');
+
+            container.innerHTML = '';
+            let concessionsTotal = 0;
+            let concessionDataString = [];
+
+            // Duyệt qua các input để lấy thông tin
+            document.querySelectorAll('.qty-input').forEach(input => {
+                const id = input.getAttribute('data-id');
+                const qty = parseInt(input.value);
+
+                if (qty > 0) {
+                    const name = input.getAttribute('data-name');
+                    const price = parseFloat(input.getAttribute('data-price'));
+                    const total = price * qty;
+                    concessionsTotal += total;
+
+                    // Thêm dòng vào sidebar
+                    const div = document.createElement('div');
+                    div.className = 'd-flex justify-content-between mb-1 text-white small';
+                    div.innerHTML = `<span>${qty}x ${name}</span> <span>${total.toLocaleString('vi-VN')} đ</span>`;
+                    container.appendChild(div);
+
+                    // Lưu định dạng "id:qty" (ví dụ "1:2") để gửi về server
+                    concessionDataString.push(`${id}:${qty}`);
+                }
+            });
+
+            // Cập nhật tổng tiền
+            const grandTotal = baseSeatPrice + concessionsTotal;
+            totalEl.innerText = grandTotal.toLocaleString('vi-VN') + " đ";
+
+            // Cập nhật input ẩn
+            hiddenInput.value = concessionDataString.join(',');
+        }
+    </script>
+}

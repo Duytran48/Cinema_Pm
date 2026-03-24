@@ -1,0 +1,184 @@
+﻿@model DoanCStar.ViewModels.SnackCheckoutViewModel
+@{
+    ViewData["Title"] = "Thanh toán Bắp Nước";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #0f1219;
+        color: #fff;
+    }
+
+    /* Style khung chọn phương thức */
+    .payment-card {
+        background-color: #1a202e;
+        border: 1px solid #2d3548;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .payment-option {
+        border: 1px solid #444;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+        background: #212529;
+    }
+
+        .payment-option:hover, .payment-option.active {
+            border-color: #ffc107;
+            background-color: #2c3036;
+        }
+
+    .radio-circle {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #666;
+        border-radius: 50%;
+        margin-right: 15px;
+        position: relative;
+    }
+
+    .payment-option.active .radio-circle {
+        border-color: #ffc107;
+    }
+
+        .payment-option.active .radio-circle::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #ffc107;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    /* Sidebar tóm tắt đơn hàng */
+    .order-summary {
+        background-color: #1a202e;
+        border: 1px solid #febb00; /* Viền vàng */
+        border-radius: 8px;
+        padding: 20px;
+        position: sticky;
+        top: 20px;
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+    }
+
+    .total-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #ffc107;
+    }
+
+    .btn-confirm {
+        width: 100%;
+        background-color: #ffc107;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 15px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+
+        .btn-confirm:hover {
+            background-color: #e0a800;
+        }
+</style>
+
+<div class="container py-5">
+    <h3 class="text-uppercase fw-bold mb-4">Thanh toán đơn hàng</h3>
+
+    <form asp-action="ProcessOrder" method="post">
+        <input type="hidden" name="OrderDataJson" value="@Model.OrderDataJson" />
+        <input type="hidden" name="PaymentMethod" id="selectedPaymentMethod" value="Tại quầy" />
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="payment-card">
+                    <h5 class="mb-4 fw-bold">Chọn phương thức thanh toán</h5>
+
+                    <div class="payment-option active" onclick="selectPayment(this, 'Tại quầy')">
+                        <div class="radio-circle"></div>
+                        <span>Thanh toán tại quầy</span>
+                    </div>
+
+                    <div class="payment-option" onclick="selectPayment(this, 'ATM')">
+                        <div class="radio-circle"></div>
+                        <span>Thẻ nội địa / Internet Banking</span>
+                    </div>
+
+                    <div class="payment-option" onclick="selectPayment(this, 'VISA')">
+                        <div class="radio-circle"></div>
+                        <span>Visa / MasterCard</span>
+                    </div>
+
+                    <div class="payment-option" onclick="selectPayment(this, 'MOMO')">
+                        <div class="radio-circle"></div>
+                        <span>Ví điện tử (Momo, ZaloPay, ...)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="order-summary">
+                    <h5 class="mb-3 fw-bold text-center border-bottom border-secondary pb-2">ĐƠN HÀNG CỦA BẠN</h5>
+
+                    @foreach (var item in Model.Items)
+                    {
+                        <div class="summary-item">
+                            <div>
+                                <div class="fw-bold">@item.Name</div>
+                                <small class="text-muted">x @item.Quantity</small>
+                            </div>
+                            <div>@item.Subtotal.ToString("N0") đ</div>
+                        </div>
+                    }
+
+                    <div class="total-row">
+                        <span>Tổng tiền:</span>
+                        <span>@Model.TotalAmount.ToString("N0") đ</span>
+                    </div>
+
+                    <button type="submit" class="btn-confirm">
+                        XÁC NHẬN THANH TOÁN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function selectPayment(element, methodValue) {
+            // Xóa class active cũ
+            document.querySelectorAll('.payment-option').forEach(el => el.classList.remove('active'));
+            // Thêm class active mới
+            element.classList.add('active');
+            // Cập nhật value cho input hidden
+            document.getElementById('selectedPaymentMethod').value = methodValue;
+        }
+    </script>
+}

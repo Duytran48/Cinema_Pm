@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Giới thiệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* CSS riêng cho trang Giới thiệu */
+    .about-header {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/cinema-bg.jpg'); /* Thay ảnh nền của bạn */
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+
+    .feature-box {
+        background: #1a202e;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #2d3548;
+        height: 100%;
+        transition: 0.3s;
+    }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-color: #febb00;
+        }
+
+    .feature-icon {
+        font-size: 3rem;
+        color: #febb00;
+        margin-bottom: 20px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #febb00;
+    }
+</style>
+
+<div class="about-header">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-uppercase">Về CGStar Cinema</h1>
+        <p class="lead">Trải nghiệm điện ảnh đỉnh cao - Nơi cảm xúc thăng hoa</p>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80"
+                 alt="CGStar Cinema" class="img-fluid rounded shadow-lg mb-4 mb-md-0">
+        </div>
+        <div class="col-md-6 text-white">
+            <h2 class="text-warning fw-bold mb-3">CÂU CHUYỆN CỦA CHÚNG TÔI</h2>
+            <p>Được thành lập với niềm đam mê điện ảnh cháy bỏng, <strong>CGStar</strong> không chỉ là một rạp chiếu phim, mà là nơi kết nối những tâm hồn yêu nghệ thuật thứ bảy.</p>
+            <p>Chúng tôi cam kết mang đến cho khán giả những trải nghiệm xem phim chuẩn quốc tế với hệ thống màn hình cong kích thước lớn, hình ảnh sắc nét cùng hệ thống âm thanh vòm sống động, đánh thức mọi giác quan.</p>
+            <a href="/" class="btn btn-warning fw-bold px-4 mt-2">ĐẶT VÉ NGAY</a>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5 text-white text-center">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-film"></i></div>
+                <h4>Công Nghệ Đỉnh Cao</h4>
+                <p class="text-white-50">Hệ thống máy chiếu Laser 4K và âm thanh Dolby Atmos mang lại trải nghiệm chân thực nhất.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-bucket-fill"></i></div>
+                <h4>Bắp Nước Hảo Hạng</h4>
+                <p class="text-white-50">Menu bắp nước đa dạng, từ vị Caramel truyền thống đến Phô mai đậm đà, luôn nóng hổi.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <h4>Vị Trí Thuận Lợi</h4>
+                <p class="text-white-50">Tọa lạc tại các trung tâm thương mại sầm uất, bãi giữ xe rộng rãi, thuận tiện di chuyển.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5 border-top border-secondary text-center text-white">
+        <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="stat-number">10+</div>
+            <div>Cụm rạp</div>
+        </div>
+        <div class="col-md-3 col-6 mb-4 mb-md-0">
+            <div class="stat-number">50+</div>
+            <div>Phòng chiếu</div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="stat-number">1M+</div>
+            <div>Khách hàng/năm</div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="stat-number">24/7</div>
+            <div>Hỗ trợ online</div>
+        </div>
+    </div>
+</div>

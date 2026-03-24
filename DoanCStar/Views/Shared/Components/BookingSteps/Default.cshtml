@@ -1,0 +1,29 @@
+@model int
+@{
+    var current = Model;
+    string StepClass(int step) => step <= current ? "active-step" : "inactive-step";
+}
+
+<div class="d-flex justify-content-between mb-4 text-white small booking-steps">
+    <div class="@StepClass(1)">
+        <span class="step-index">1</span> Chọn ghế
+    </div>
+    <div class="@StepClass(2)">
+        <span class="step-index">2</span> Bắp & nước
+    </div>
+    <div class="@StepClass(3)">
+        <span class="step-index">3</span> Thanh toán
+    </div>
+</div>
+
+<style>
+    .booking-steps .step-index {
+        display:inline-flex;align-items:center;justify-content:center;
+        width:24px;height:24px;border-radius:50%;margin-right:6px;
+        border:1px solid #ffc107;
+    }
+    .booking-steps .active-step .step-index {
+        background:#ffc107;color:#000;
+    }
+    .booking-steps .inactive-step { opacity:.6; }
+</style>

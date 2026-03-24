@@ -1,0 +1,33 @@
+﻿@model DoanCStar.Models.Booking
+
+<form asp-action="EditBookingManagement" method="post">
+    <input type="hidden" asp-for="BookingId" />
+
+    <div class="form-group">
+        <label>Rạp</label>
+        <input type="text" class="form-control" value="@ViewBag.Cinema.Name" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Phim</label>
+        <input type="text" class="form-control" value="@ViewBag.Movie.Title" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Suất chiếu</label>
+        <select asp-for="ShowTimeId" class="form-control" asp-items="@(new SelectList(ViewBag.ShowTimes, "ShowTimeId", "Time"))">
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Ghế</label>
+        <input type="text" asp-for="BookingSeats" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Giá tiền</label>
+        <input type="text" class="form-control" value="@Model.TotalPrice" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+</form>
